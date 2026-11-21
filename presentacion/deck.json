@@ -1,0 +1,71 @@
+{
+  "v": 5,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-20T06:30:00Z"
+  },
+  "lists": "css",
+  "format": {
+    "v": 1,
+    "shared": [
+      "project/deck.css"
+    ]
+  },
+  "title": "Plataforma de Analítica Autoservicio — Propuesta",
+  "cover": "cover",
+  "order": [
+    "cover",
+    "problema",
+    "propuesta",
+    "benchmark",
+    "patron",
+    "usuarios",
+    "alcance",
+    "arquitectura",
+    "opciones",
+    "superset-vista",
+    "comparativa",
+    "recomendacion",
+    "roadmap",
+    "agentes",
+    "modulos",
+    "colaboracion",
+    "ejemplo-paralelo",
+    "metodologia",
+    "riesgos",
+    "aprobar"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Contexto: el problema y la propuesta",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Benchmark de plataformas del mercado",
+      "start": "benchmark"
+    },
+    "s3": {
+      "description": "Dimensión y alcance del MVP",
+      "start": "usuarios"
+    },
+    "s4": {
+      "description": "Arquitectura, opciones y recomendación",
+      "start": "arquitectura"
+    },
+    "s5": {
+      "description": "Roadmap, trabajo modular con agentes y aprobación",
+      "start": "roadmap"
+    }
+  },
+  "faces": {
+    "space-grotesk": {
+      "family": "Space Grotesk",
+      "href": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap"
+    },
+    "inter": {
+      "family": "Inter",
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
+    }
+  },
+  "designSystems": []
+}

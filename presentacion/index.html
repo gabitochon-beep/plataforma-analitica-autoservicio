@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma de Analítica Autoservicio — Propuesta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    background: #0F1720; overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  #stage {
+    position: fixed; inset: 0;
+    overflow: hidden;
+  }
+  .slide-wrap {
+    display: none;
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 1920px; height: 1080px;
+    transform-origin: center center;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+    overflow: hidden;
+  }
+  .slide-wrap.active { display: block; }
+  .slide-wrap > section {
+    width: 1920px; height: 1080px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .slide-wrap aside { display: none; }
+  #notes-bar {
+    display: none;
+    position: fixed; left: 24px; bottom: 72px; max-width: 680px; z-index: 9998;
+    background: rgba(19,32,46,0.95); color: #F4F1EA; border: 1px solid #E2702A;
+    padding: 14px 18px; border-radius: 12px; font-size: 15px; line-height: 1.45;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  }
+  #notes-bar.visible { display: block; }
+  .toolbar {
+    position: fixed; bottom: 16px; right: 20px; z-index: 9999;
+    display: flex; gap: 8px; align-items: center;
+    background: rgba(19,32,46,0.92); color: #F4F1EA;
+    padding: 8px 14px; border-radius: 999px; font-size: 13px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .toolbar button {
+    background: #E2702A; color: #13202E; border: none; border-radius: 999px;
+    padding: 6px 12px; cursor: pointer; font-weight: 700; font-size: 13px;
+  }
+  .toolbar button.sec { background: #263B52; color: #F4F1EA; font-weight: 600; }
+  .toolbar button:hover { opacity: 0.9; }
+  @page { size: 1920px 1080px; margin: 0; }
+  @media print {
+    html, body { width: auto; height: auto; overflow: visible; background: #fff; }
+    #stage { position: static; display: block; }
+    .toolbar, #notes-bar { display: none !important; }
+    .slide-wrap {
+      display: block !important;
+      position: static !important;
+      left: auto !important; top: auto !important;
+      transform: none !important;
+      box-shadow: none !important;
+      page-break-after: always;
+      break-after: page;
+    }
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+<div class="slide-wrap" data-slide="cover"><section id="cover" class="dark" style="justify-content:flex-end;">
+<p class="kicker">Propuesta para aprobación · Noviembre 2026</p>
+<h1>Plataforma de Analítica Autoservicio</h1>
+<p class="lead muted">Dimensión, alcance y arquitectura. El negocio arma sus propios tableros; detrás, una base robusta de datos y medidas certificadas.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>1</span></div>
+<aside>Objetivo de la sesión: aprobar el alcance del MVP, la arquitectura y la opción recomendada para arrancar la Fase 0.</aside>
+</section></div><div class="slide-wrap" data-slide="problema"><section id="problema">
+<div class="head"><p class="kicker">El problema · Hoy con Power BI Server</p><h2>Cada reporte redefine sus métricas</h2></div>
+<div class="cards">
+<div class="card"><h3>Números que no cuadran</h3><p class="body">En Power BI Report Server cada archivo redefine sus cálculos; la misma venta da distinto según el reporte y se pierde confianza.</p></div>
+<div class="card"><h3>El área de datos es el cuello de botella</h3><p class="body">Los usuarios no pueden armar sus propios tableros: cada cambio o reporte nuevo entra en la cola técnica.</p></div>
+<div class="card"><h3>Excel como destino final</h3><p class="body">Al no tener autoservicio gobernado, el negocio exporta a Excel y rearma a mano, sin versiones ni seguridad.</p></div>
+</div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>2</span></div>
+<aside>Partimos de nuestra realidad actual con Power BI Server: no se trata de tirar lo que funciona, sino de resolver el cuello de botella y unificar las medidas.</aside>
+</section></div><div class="slide-wrap" data-slide="propuesta"><section id="propuesta" class="alt">
+<div class="head"><p class="kicker">La propuesta</p><h2>Medidas definidas una vez.<br>Tableros creados por el negocio.</h2></div>
+<div class="layers">
+<div class="layer front"><h3>Lo que ve el usuario</h3><p class="body">Arrastrar y soltar medidas certificadas · catálogo de gráficos · plantillas por área · sin DAX ni SQL</p></div>
+<div class="layer back"><h3>La robustez de atrás</h3><p class="body">Lago de datos desde el DWH y los sistemas · modelado · capa semántica con medidas certificadas · seguridad por fila · caché</p></div>
+</div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>3</span></div>
+<aside>La clave es la capa semántica: "Venta neta" significa lo mismo en todos los tableros.</aside>
+</section></div><div class="slide-wrap" data-slide="benchmark"><section id="benchmark">
+<div class="head"><p class="kicker">Benchmark 2026</p><h2>Qué tomamos de cada plataforma</h2></div>
+<table>
+<tr><th style="width:340px;">Plataforma</th><th style="width:600px;">Dónde viven las medidas</th><th>Lo que adoptamos</th></tr>
+<tr><td class="strong">Power BI / Fabric</td><td>Modelo semántico con DAX y RLS</td><td>Un modelo compartido para muchos reportes</td></tr>
+<tr><td class="strong">Databricks AI/BI</td><td>Metric views en Unity Catalog (YAML)</td><td>Medidas separadas de dimensiones; certificación</td></tr>
+<tr><td class="strong">Looker</td><td>LookML versionado en git</td><td>Medidas como código, con revisión y pruebas</td></tr>
+<tr><td class="strong">Tableau</td><td>Orígenes publicados + Pulse</td><td>Métricas seguibles con alertas</td></tr>
+<tr><td class="strong">Superset / Metabase</td><td>Datasets y modelos open source</td><td>Base visual sin licencias (Opción B)</td></tr>
+<tr><td class="strong">Cube Core / dbt</td><td>Capa semántica independiente del front</td><td>El corazón de ambas opciones</td></tr>
+</table>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>4</span></div>
+<aside>Fuentes: documentación de Databricks, Microsoft Fabric, Looker, Tableau, Cube y comparativas 2026 citadas en el documento de arquitectura.</aside>
+</section></div><div class="slide-wrap" data-slide="patron"><section id="patron" class="accent statement" style="justify-content:center;">
+<p class="kicker">Conclusión del benchmark</p>
+<h2>Todos los líderes convergen en el mismo patrón: medidas gobernadas una vez y el negocio compone encima.</h2>
+<p class="lead">Por eso la capa semántica es una pieza propia e independiente, y el front se vuelve intercambiable.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>5</span></div>
+</section></div><div class="slide-wrap" data-slide="usuarios"><section id="usuarios">
+<div class="head"><p class="kicker">Dimensión</p><h2>Cuatro perfiles, una sola fuente de verdad</h2></div>
+<div class="cards">
+<div class="card"><p class="tagline">Consume</p><h3>Gerencia, tiendas, comercial</h3><p class="body">Ve tableros, filtra, exporta y recibe alertas.</p></div>
+<div class="card"><p class="tagline">Crea</p><h3>Analistas de área</h3><p class="body">Arma tableros con medidas certificadas y plantillas.</p></div>
+<div class="card"><p class="tagline">Profundiza</p><h3>Analista avanzado</h3><p class="body">SQL, medidas de equipo y propuestas para certificar.</p></div>
+<div class="card hl"><p class="tagline">Garantiza</p><h3>Equipo de datos</h3><p class="body">Ingesta, modelado, certificación, seguridad y monitoreo.</p></div>
+</div>
+<p class="small muted">Por confirmar: usuarios y concurrencia, volumen del DWH, sistemas fuente, frecuencia de actualización, nube u on-premise.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>6</span></div>
+</section></div><div class="slide-wrap" data-slide="alcance"><section id="alcance" class="alt">
+<div class="head"><p class="kicker">Alcance</p><h2>El MVP: un dominio de punta a punta</h2></div>
+<div class="cols">
+<div class="col"><h3>En el MVP · Ventas y Margen</h3>
+<ul>
+<li>Ingesta del DWH y un sistema fuente</li>
+<li>Lago bronce → plata → oro de Ventas</li>
+<li>20–30 medidas certificadas</li>
+<li>Constructor de arrastrar y soltar</li>
+<li>10–12 gráficos y 3 plantillas</li>
+<li>Seguridad por fila e inicio de sesión corporativo</li>
+</ul></div>
+<div class="col"><h3 class="muted">Fases siguientes</h3>
+<ul class="muted">
+<li>Inventario y Promociones</li>
+<li>Medidas de equipo y certificación</li>
+<li>Alertas y suscripciones por correo</li>
+<li>Preguntas en lenguaje natural (IA)</li>
+<li>Modelos predictivos de demanda</li>
+</ul></div>
+</div>
+<p class="small muted">Fuera de alcance: reemplazar el DWH actual, migrar todos los reportes existentes, usuarios externos.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>7</span></div>
+</section></div><div class="slide-wrap" data-slide="arquitectura"><section id="arquitectura">
+<div class="head"><p class="kicker">Arquitectura de referencia</p><h2>Cinco capas; solo la última cambia</h2></div>
+<div class="stack">
+<div class="row"><h3>1 · Ingesta</h3><p class="body">Airbyte / dlt para cargas · Debezium CDC desde ERP/POS · Dagster orquesta</p></div>
+<div class="row"><h3>2 · Lago de datos</h3><p class="body">Apache Iceberg sobre almacenamiento de objetos · dbt · bronce → plata → oro</p></div>
+<div class="row"><h3>3 · Motor de consulta</h3><p class="body">Trino en producción · DuckDB en desarrollo y pruebas</p></div>
+<div class="row key"><h3>4 · Capa semántica</h3><p class="body">Cube Core: medidas certificadas en YAML (git), seguridad por fila, caché y API</p></div>
+<div class="row"><h3>5 · Experiencia</h3><p class="body">Opción A: front propio en React · Opción B: Apache Superset personalizado</p></div>
+</div>
+<p class="small muted">Transversal a todas las capas: SSO y roles, catálogo y linaje, calidad de datos, monitoreo y costos, todo como código.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>8</span></div>
+<aside>Fuentes: DWH actual, ERP/POS y otros sistemas. Las capas 1 a 4 son idénticas en ambas opciones.</aside>
+</section></div><div class="slide-wrap" data-slide="opciones"><section id="opciones" class="alt">
+<div class="head"><p class="kicker">Las dos opciones</p><h2>Dos caminos sobre la misma base (ambos sin licencias)</h2></div>
+<div class="cards">
+<div class="card"><p class="tagline">Opción A · $0 licencias</p><h3>Interfaz hecha desde cero</h3><p class="body">Programamos toda la pantalla a la medida (React + ECharts) sobre las medidas de Cube.</p>
+<ul class="body"><li>Experiencia 100% a la medida</li><li>Plantillas e IA donde queramos</li><li>Más tiempo y mantenimiento propio</li></ul>
+<p class="num">7–9 meses · 6–8 personas</p></div>
+<div class="card hl">
+<div style="display:flex; justify-content:space-between; align-items:center; gap:20px;">
+<div><p class="tagline">Opción B · recomendada · $0 licencias</p><h3>Interfaz base open source</h3></div>
+<div style="background:#FFFFFF; border-radius:12px; padding:10px 18px; display:flex; align-items:center; flex-shrink:0;"><img src="assets/apache-superset-logo.png" alt="Apache Superset" style="height:64px; width:auto; display:block;"></div>
+</div>
+<p class="body">Adaptamos Apache Superset (gratuito, licencia Apache 2.0) con nuestra marca, conectado a Cube por su API SQL.</p>
+<ul class="body"><li>Pantalla probada, 40+ gráficos listos</li><li>Misma plataforma propia, mitad de tiempo</li><li>Menos control fino de la experiencia</li></ul>
+<p class="num">4–5 meses · 4–5 personas</p></div>
+</div>
+<p class="small muted">Estimaciones referenciales; se ajustan al confirmar dimensión e infraestructura.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>9</span></div>
+</section></div><div class="slide-wrap" data-slide="superset-vista"><section id="superset-vista">
+<div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px;">
+<div class="head"><p class="kicker">Cómo se ve la Opción B · $0 licencias</p><h2>Apache Superset conectado a nuestro modelo</h2></div>
+<div style="background:#FFFFFF; border-radius:14px; padding:12px 24px; box-shadow:0 4px 16px rgba(19,32,46,0.08); flex-shrink:0;"><img src="assets/apache-superset-logo.png" alt="Apache Superset" style="height:72px; width:auto; display:block;"></div>
+</div>
+<div style="background:#FFFFFF; border-radius:16px; padding:16px; box-shadow:0 10px 32px rgba(19,32,46,0.12); display:flex; justify-content:center; align-items:center; flex:1; min-height:0;">
+<img src="assets/superset-dashboard-ejemplo.png" alt="Ejemplo de tablero en Apache Superset" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:8px; display:block;">
+</div>
+<div class="row key" style="padding:18px 28px;">
+<h3 style="width:360px;">Conexión al modelo</h3>
+<p class="body">DWH / Sistemas → Lago Iceberg + dbt (Oro) → Trino → <strong>Cube Core (API SQL tipo PostgreSQL)</strong> → Apache Superset</p>
+</div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>10</span></div>
+<aside>Apache Superset es 100% gratuito (Apache 2.0). Se conecta a Cube como si fuera una base de datos PostgreSQL: el usuario arrastra medidas ya certificadas sin escribir SQL ni DAX.</aside>
+</section></div><div class="slide-wrap" data-slide="comparativa"><section id="comparativa">
+<div class="head"><p class="kicker">Comparativa</p><h2>B llega en la mitad del tiempo</h2></div>
+<table>
+<tr><th style="width:520px;">Criterio</th><th>Opción A · Interfaz desde cero</th><th>Opción B · Base Superset</th></tr>
+<tr><td class="strong">Tiempo al MVP</td><td>7–9 meses</td><td>4–5 meses</td></tr>
+<tr><td class="strong">Experiencia de arrastrar y soltar</td><td>Excelente, a la medida</td><td>Buena, estándar de Superset</td></tr>
+<tr><td class="strong">IA integrada</td><td>Nativa en el producto</td><td>Vía complemento</td></tr>
+<tr><td class="strong">Costo de licencias</td><td>Ninguno</td><td>Ninguno</td></tr>
+<tr><td class="strong">Riesgo técnico</td><td>Medio-alto</td><td>Bajo-medio</td></tr>
+<tr><td class="strong">Mantenimiento</td><td>Front propio a largo plazo</td><td>Actualizar versiones</td></tr>
+<tr><td class="strong">Reutilización al cambiar</td><td>Base y medidas 100%</td><td>Base y medidas 100%</td></tr>
+</table>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>11</span></div>
+</section></div><div class="slide-wrap" data-slide="recomendacion"><section id="recomendacion" class="dark" style="justify-content:center;">
+<p class="kicker">Recomendación</p>
+<h1 style="font-size:96px;">Opción B ahora.<br>Opción A como evolución.</h1>
+<p class="lead muted">Validamos adopción y medidas con usuarios reales en 4–5 meses. Pasar al front propio solo cambia la capa visual: datos, medidas y seguridad se reutilizan.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>12</span></div>
+</section></div><div class="slide-wrap" data-slide="roadmap"><section id="roadmap">
+<div class="head"><p class="kicker">Roadmap · Opción B</p><h2>MVP en producción en el mes 5</h2></div>
+<div class="cards" style="gap:24px;">
+<div class="card" style="padding:32px;"><p class="tagline">Fase 0 · Mes 1</p><h3>Fundaciones</h3><p class="body small">Infra, lago, SSO y CI/CD; agentes configurados</p><p class="gate">◆ Ambiente listo</p></div>
+<div class="card" style="padding:32px;"><p class="tagline">Fase 1 · Meses 2–3</p><h3>Datos y medidas</h3><p class="body small">DWH + 1 sistema; 20–30 medidas conciliadas</p><p class="gate">◆ Medidas cuadran</p></div>
+<div class="card hl" style="padding:32px;"><p class="tagline">Fase 2 · Meses 4–5</p><h3>MVP autoservicio</h3><p class="body small">Superset + Cube, 3 plantillas, piloto con campeones</p><p class="gate on" style="color:#F0A06B;">◆ Piloto aprobado</p></div>
+<div class="card" style="padding:32px;"><p class="tagline">Fase 3 · Meses 6–9</p><h3>Escalar</h3><p class="body small">Más dominios, alertas, piloto de IA; decisión sobre A</p><p class="gate">◆ Adopción ≥ meta</p></div>
+<div class="card" style="padding:32px;"><p class="tagline">Fase 4 · Mes 10+</p><h3>Evolución</h3><p class="body small">Front propio (A) y modelos predictivos</p></div>
+</div>
+<p class="small muted">Cada fase termina en una puerta (◆) con un criterio verificable. Ningún tablero se abre a usuarios hasta que las medidas cuadren con el DWH.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>13</span></div>
+</section></div><div class="slide-wrap" data-slide="agentes"><section id="agentes" class="alt">
+<div class="head"><p class="kicker">Ejecución</p><h2>Agentes Antigravity, revisados por humanos</h2></div>
+<table style="font-size:24px;">
+<tr><th style="width:420px;">Agente</th><th>Qué produce</th><th style="width:440px;">Aprueba</th></tr>
+<tr><td class="strong">Plataforma</td><td>Infraestructura como código, CI/CD, monitoreo</td><td>Líder técnico</td></tr>
+<tr><td class="strong">Ingesta</td><td>Conectores al DWH y sistemas, capa bronce</td><td>Ingeniero de datos</td></tr>
+<tr><td class="strong">Modelado</td><td>Modelos dbt plata y oro, pruebas de calidad</td><td>Ingeniero analítico</td></tr>
+<tr><td class="strong">Semántico</td><td>Medidas en YAML de Cube, seguridad por fila</td><td>Analítico + negocio</td></tr>
+<tr><td class="strong">Conciliación (QA)</td><td>Compara cada medida contra DWH y reportes</td><td>Ingeniero analítico</td></tr>
+<tr><td class="strong">Experiencia</td><td>Superset: tema y plantillas (A: código del front)</td><td>Líder técnico + UX</td></tr>
+<tr><td class="strong">Documentación</td><td>Catálogo de medidas y guías de usuario</td><td>Dueño de negocio</td></tr>
+</table>
+<p class="small muted">Cada agente trabaja en una rama de git; nada se integra sin revisión humana y pruebas en CI.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
+</section></div><div class="slide-wrap" data-slide="modulos"><section id="modulos">
+<div class="head"><p class="kicker">Cómo se organiza</p><h2>Un monorepo: 5 módulos y contratos compartidos</h2></div>
+<div class="stack">
+<div class="row key"><h3>0 · Contratos (contracts/)</h3><p class="body">Esquemas de tablas Oro, catálogo de medidas, reglas RLS y datos sintéticos — se acuerdan primero</p></div>
+<div class="row"><h3>1 · Infraestructura</h3><p class="body">Docker Compose, MinIO/S3, Iceberg, Trino, Keycloak y pipelines de CI/CD</p></div>
+<div class="row"><h3>2 · Ingesta (Bronce)</h3><p class="body">Conectores Airbyte/dlt/CDC y orquestación Dagster desde DWH y sistemas fuente</p></div>
+<div class="row"><h3>3 · Transformación (dbt)</h3><p class="body">Modelos medallón Bronce → Plata → Oro y pruebas automáticas de calidad</p></div>
+<div class="row"><h3>4 · Semántica y BI</h3><p class="body">Cube Core (medidas YAML + RLS) y Apache Superset (tema, roles y plantillas)</p></div>
+</div>
+<p class="small muted">Cada módulo tiene su propio AGENTS.md: un agente puede leer contracts/, pero solo edita su módulo.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>15</span></div>
+<aside>Antes de construir, congelamos los contratos en contracts/. Así el equipo de datos y el de BI avanzan sin adivinar nombres ni esperar al otro.</aside>
+</section></div><div class="slide-wrap" data-slide="colaboracion"><section id="colaboracion" class="dark">
+<div class="head"><p class="kicker">Equipo de 3 + agentes</p><h2>Roles claros y dos carriles en paralelo</h2></div>
+<div class="cards">
+<div class="card" style="border-top:6px solid #E2702A;">
+<p class="tagline">Dirección · Jefe (Product Owner)</p>
+<h3>Gobierno y aprobación</h3>
+<p class="body">Prioriza alcance y medidas con negocio, desbloquea accesos e infraestructura, y aprueba cada hito (Go/No-Go) al cierre del sprint.</p>
+</div>
+<div class="card">
+<p class="tagline">Carril 1 · Rafael / Osmerlys + agentes</p>
+<h3>Datos (Módulos 2 y 3)</h3>
+<p class="body">Opera sus agentes de ingesta y modelado dbt hasta capa Oro. Valida sus tablas contra el esquema firmado en <strong>contracts/</strong>.</p>
+</div>
+<div class="card">
+<p class="tagline">Carril 2 · Osmerlys / Rafael + agentes</p>
+<h3>Semántica y BI (Módulos 4 y 5)</h3>
+<p class="body">Opera sus agentes de Cube, RLS y Superset usando <strong>datos sintéticos</strong> en DuckDB, sin esperar a la ingesta real.</p>
+</div>
+</div>
+<div class="row" style="background:#1E3045; color:#F4F1EA; padding:22px 32px;">
+<h3 style="width:460px; color:#F0A06B;">Agentes creados en conjunto</h3>
+<p class="body" style="color:#C9D1DA;">En Fase 0 definimos juntos las reglas, prompts y fronteras (<strong>AGENTS.md</strong>) de todos los agentes. Luego cada uno dirige su equipo de agentes en su carril y hacemos revisión cruzada humana.</p>
+</div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>16</span></div>
+<aside>Somos 3 personas: nuestro jefe gobierna prioridades y aprobaciones; Rafael y yo nos dividimos en dos carriles independientes, cada uno apoyado por agentes creados en conjunto desde Fase 0.</aside>
+</section></div><div class="slide-wrap" data-slide="ejemplo-paralelo"><section id="ejemplo-paralelo">
+<div class="head"><p class="kicker">Ejemplo práctico · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
+
+<div class="row key" style="padding:22px 32px;">
+<h3 style="width:430px;">Día 1 (juntos) · El molde</h3>
+<p class="body">Acordamos en <strong>contracts/</strong> las columnas exactas de <code>oro.fact_ventas</code> (<code>fecha</code>, <code>id_tienda</code>, <code>id_producto</code>, <code>venta_neta</code>, <code>costo_total</code>, <code>unidades</code>) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</p>
+</div>
+
+<div class="cards">
+<div class="card">
+<p class="tagline">En paralelo · Persona A (Datos)</p>
+<h3>Trae y limpia los datos reales</h3>
+<p class="body">Conecta DWH y ERP, limpia en dbt (Bronce → Plata → Oro) y entrega la tabla real <code>oro.fact_ventas</code> cumpliendo <strong>exactamente las mismas 6 columnas</strong> del contrato.</p>
+</div>
+<div class="card">
+<p class="tagline">En paralelo · Persona B (Semántica + BI)</p>
+<h3>Construye medidas y tableros</h3>
+<p class="body">Una fórmula solo necesita los nombres de columna: escribe <strong>Venta Neta</strong>, <strong>Margen %</strong>, permisos por tienda y los 3 tableros en Superset, probando en vivo con las <strong>2.000 filas de prueba</strong>.</p>
+</div>
+</div>
+
+<div class="row" style="background:#E2702A; color:#13202E; padding:24px 32px;">
+<h3 style="width:430px; color:#13202E;">Cierre de sprint (cada 1–2 sem)</h3>
+<p class="body" style="color:#13202E;"><strong>1.</strong> Validación automática del molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (de datos de prueba a datos reales, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
+</div>
+
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>17</span></div>
+<aside>Primero acordamos el molde exacto de las tablas y creamos datos de prueba con ese mismo molde. Así uno construye las fórmulas y tableros sin esperar al DWH, mientras el otro trae y limpia los datos reales; al cerrar cada sprint solo cambiamos el enchufe y verificamos que todo cuadre.</aside>
+</section></div><div class="slide-wrap" data-slide="metodologia"><section id="metodologia" class="alt">
+<div class="head"><p class="kicker">Metodología de trabajo</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
+<div class="cards">
+<div class="card hl">
+<p class="tagline">Día 1 · Los 3 (1 hora)</p>
+<h3>1 · Planning y Contratos</h3>
+<p class="body">El jefe fija la meta del sprint. Rafael y tú congelan <strong>contracts/</strong> (tablas, medidas y fixtures) antes de lanzar agentes.</p>
+</div>
+<div class="card">
+<p class="tagline">Días 2–8 · En paralelo</p>
+<h3>2 · Ejecución + Daily 10 min</h3>
+<p class="body">Cada uno trabaja con su equipo de agentes en ramas aisladas. Sincronización diaria de 10 min y revisión cruzada de PRs.</p>
+</div>
+<div class="card">
+<p class="tagline">Día 9 · Rafael y tú (2 h)</p>
+<h3>3 · Integración y QA</h3>
+<p class="body">Cambio de enchufe en Cube (prueba → datos reales) y corrida automática de conciliación contra DWH / Power BI.</p>
+</div>
+<div class="card" style="background:#E2702A; color:#13202E;">
+<p class="tagline" style="color:#13202E;">Día 10 · Los 3 (45 min)</p>
+<h3 style="color:#13202E;">4 · Demo y Go / No-Go</h3>
+<p class="body" style="color:#13202E;">Demo en vivo con datos reales conciliados. El jefe valida valor de negocio y aprueba el paso al siguiente sprint.</p>
+</div>
+</div>
+<p class="small muted">Regla de cierre (Definition of Done): nada se entrega sin pruebas de contrato en verde, conciliación 100% contra DWH y aprobación humana.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>18</span></div>
+<aside>Una metodología simple y sin burocracia: 4 puntos de encuentro claros cada 2 semanas. Los agentes ejecutan rápido en paralelo; los humanos controlan los contratos, la integración y la aprobación final.</aside>
+</section></div><div class="slide-wrap" data-slide="riesgos"><section id="riesgos">
+<div class="head"><p class="kicker">Riesgos</p><h2>El mayor riesgo es la confianza</h2></div>
+<table>
+<tr><th style="width:620px;">Riesgo</th><th>Mitigación</th></tr>
+<tr><td class="strong">Medidas que no cuadran</td><td>Conciliar cada medida contra el DWH antes de certificarla</td></tr>
+<tr><td class="strong">Baja adopción</td><td>Plantillas desde el día 1, campeones por área, capacitación corta</td></tr>
+<tr><td class="strong">Calidad en sistemas fuente</td><td>Reglas en capa plata con alertas al dueño del dato</td></tr>
+<tr><td class="strong">Rendimiento con muchos usuarios</td><td>Preagregaciones y caché en Cube; Trino según concurrencia</td></tr>
+<tr><td class="strong">Código de agentes sin control</td><td>Ramas, revisión humana obligatoria y pruebas en CI</td></tr>
+</table>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>19</span></div>
+</section></div><div class="slide-wrap" data-slide="aprobar"><section id="aprobar" class="accent">
+<div class="head"><p class="kicker">Decisión</p><h2>Lo que pedimos aprobar hoy</h2></div>
+<ol style="font-size:40px; gap:24px;">
+<li>Alcance del MVP: Ventas y Margen de punta a punta</li>
+<li>Arquitectura de referencia de cinco capas</li>
+<li>Opción B para el MVP, con A como evolución</li>
+<li>Arranque de la Fase 0 con agentes Antigravity</li>
+</ol>
+<div class="spacer"></div>
+<p class="small">Antes de la Fase 1: confirmar dimensión (usuarios, volumen, fuentes, infraestructura) y taller de medidas con negocio.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>20</span></div>
+</section></div>
+</div>
+<div id="notes-bar"></div>
+<div class="toolbar">
+  <button onclick="prev()">&#8592; Anterior</button>
+  <span id="counter">1 / 20</span>
+  <button onclick="next()">Siguiente &#8594;</button>
+  <button class="sec" onclick="toggleNotes()" title="Tecla N">Notas</button>
+  <button class="sec" onclick="toggleFullscreen()" title="Tecla F">Pantalla completa</button>
+  <button class="sec" onclick="window.print()">PDF</button>
+</div>
+<script>
+  const wraps = Array.from(document.querySelectorAll('.slide-wrap'));
+  const notesBar = document.getElementById('notes-bar');
+  let idx = 0;
+  let showNotes = false;
+
+  function fit() {
+    const scale = Math.min((window.innerWidth - 32) / 1920, (window.innerHeight - 68) / 1080);
+    wraps.forEach(w => { w.style.transform = `translate(-50%, -50%) scale(${scale})`; });
+  }
+  function renderNotes() {
+    const aside = wraps[idx].querySelector('aside');
+    if (showNotes && aside && aside.textContent.trim()) {
+      notesBar.textContent = 'Nota del presentador: ' + aside.textContent.trim();
+      notesBar.classList.add('visible');
+    } else {
+      notesBar.classList.remove('visible');
+    }
+  }
+  function show(i) {
+    idx = Math.max(0, Math.min(wraps.length - 1, i));
+    wraps.forEach((w, n) => w.classList.toggle('active', n === idx));
+    document.getElementById('counter').textContent = (idx + 1) + ' / ' + wraps.length;
+    renderNotes();
+  }
+  function next() { show(idx + 1); }
+  function prev() { show(idx - 1); }
+  function toggleNotes() { showNotes = !showNotes; renderNotes(); }
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+  window.addEventListener('resize', fit);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+    if (e.key === 'n' || e.key === 'N') toggleNotes();
+    if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+  });
+  fit();
+  show(0);
+</script>
+</body>
+</html>

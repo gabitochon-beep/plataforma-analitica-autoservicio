@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: plataforma-analitica-autoservicio
+    runtime: static
+    staticPublishPath: presentacion/compartir-rafael
+    pullRequestPreviewsEnabled: false

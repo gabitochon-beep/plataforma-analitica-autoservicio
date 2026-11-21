@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Rápida para Rafael — Plataforma de Analítica Autoservicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F4F1EA; color: #13202E; font-family: 'Inter', sans-serif; line-height: 1.55; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 28px 72px; }
+  header { background: #13202E; color: #F4F1EA; border-radius: 18px; padding: 36px 40px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #F0A06B; margin: 0 0 8px; }
+  h1 { font-family: 'Space Grotesk', sans-serif; font-size: 34px; line-height: 1.12; margin: 0 0 10px; }
+  header p.sub { color: #C9D1DA; margin: 0; max-width: 620px; font-size: 15px; }
+  .btn-pdf { background: #E2702A; color: #13202E; border: none; border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: 14px; cursor: pointer; }
+  .btn-pdf:hover { opacity: 0.92; }
+  .card { background: #FFFDF8; border-radius: 16px; padding: 26px 30px; margin-bottom: 20px; box-shadow: 0 4px 18px rgba(19,32,46,0.05); }
+  .card.accent { background: #13202E; color: #F4F1EA; }
+  .card.accent h2 { color: #F0A06B; }
+  .card.accent p, .card.accent li { color: #D7DEE6; }
+  h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; margin: 0 0 12px; color: #13202E; }
+  h3 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; margin: 14px 0 6px; color: #B5501A; }
+  p { margin: 0 0 10px; font-size: 15px; }
+  ul, ol { margin: 6px 0 10px; padding-left: 22px; font-size: 15px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+  th { text-align: left; font-family: 'Space Grotesk', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #5A6573; padding: 10px 12px; border-bottom: 2px solid #13202E; }
+  td { padding: 10px 12px; border-bottom: 1px solid #E2DCCE; vertical-align: top; }
+  td strong { color: #13202E; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 10px; }
+  .mini { background: #F4F1EA; border-radius: 12px; padding: 16px 18px; }
+  .mini.hl { background: #E2702A; color: #13202E; }
+  .mini h3 { margin-top: 0; }
+  .mini.hl h3 { color: #13202E; }
+  code { background: #EAE4D7; padding: 2px 6px; border-radius: 5px; font-size: 13px; color: #13202E; }
+  footer { text-align: center; color: #5A6573; font-size: 13px; margin-top: 28px; }
+  @media print {
+    body { background: #fff; }
+    .btn-pdf { display: none; }
+    .card { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="kicker">Guía Rápida de Lectura · 3 minutos</p>
+      <h1>Plataforma de Analítica Autoservicio</h1>
+      <p class="sub">Resumen práctico para Rafael: qué estamos proponiendo, qué hace cada herramienta y cómo trabajaremos los 3 (Jefe, Rafael y Osmerlys) con nuestros agentes.</p>
+    </div>
+    <button class="btn-pdf" onclick="window.print()">Guardar como PDF</button>
+  </header>
+
+  <div class="card">
+    <h2>1. ¿De qué se trata el proyecto en una frase?</h2>
+    <p>Pasar de nuestra situación actual con <strong>Power BI Report Server</strong> (donde cada reporte redefine sus cálculos y el equipo técnico es un cuello de botella) a una <strong>plataforma propia de autoservicio</strong>:</p>
+    <ul>
+      <li><strong>Adelante (capa simple):</strong> el usuario de negocio arma sus propios tableros arrastrando medidas ya listas, sin escribir DAX ni SQL.</li>
+      <li><strong>Atrás (capa robusta):</strong> las fórmulas (<code>Venta Neta</code>, <code>Margen %</code>, <code>Unidades</code>) se definen <strong>una sola vez</strong> para que siempre cuadren igual en toda la empresa.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>2. Glosario sin humo (las 5 capas)</h2>
+    <table>
+      <tr><th style="width:155px;">Capa</th><th style="width:190px;">Herramienta</th><th>Qué hace en palabras simples</th></tr>
+      <tr><td><strong>1 · Ingesta</strong></td><td>Airbyte / dlt / Debezium + Dagster</td><td>Trae datos del <strong>DWH actual</strong> y sistemas (ERP/POS) al lago. No reemplaza el DWH, lo usa como fuente.</td></tr>
+      <tr><td><strong>2 · Lago de datos</strong></td><td>MinIO/S3 + <strong>Iceberg</strong> + <strong>dbt</strong></td><td>Guarda y limpia datos en 3 niveles: <strong>Bronce</strong> (crudo) → <strong>Plata</strong> (limpio) → <strong>Oro</strong> (tablas listas para negocio) con pruebas automáticas.</td></tr>
+      <tr><td><strong>3 · Motor SQL</strong></td><td><strong>Trino</strong> / <strong>DuckDB</strong></td><td>Consulta el lago a alta velocidad. DuckDB permite desarrollar rapidísimo en nuestras PCs con datos de prueba.</td></tr>
+      <tr><td><strong>4 · Capa semántica</strong></td><td><strong>Cube Core</strong> (el corazón)</td><td>Aquí viven las fórmulas oficiales (en YAML en git) y la seguridad por tienda/rol (RLS). Expone una <strong>API SQL tipo PostgreSQL</strong>.</td></tr>
+      <tr><td><strong>5 · Pantalla BI</strong></td><td><strong>Apache Superset</strong> (Opción B) o React (Opción A)</td><td>La interfaz donde el usuario arrastra medidas y arma gráficos. Superset se conecta a Cube como si fuera un PostgreSQL normal.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>3. Opción A vs Opción B (¡Ambas son $0 en licencias!)</h2>
+    <p>En ambos casos <strong>la plataforma es 100% nuestra y paga $0 en licencias de BI</strong> (todo es open source, licencia Apache 2.0). La única diferencia es cómo construimos la pantalla (piso 5):</p>
+    <div class="grid">
+      <div class="mini">
+        <h3>Opción A · Interfaz desde cero (7–9 meses)</h3>
+        <p>Programamos toda la pantalla de gráficos a la medida (React + ECharts). Máximo control visual, pero doble tiempo y mantenimiento propio.</p>
+      </div>
+      <div class="mini hl">
+        <h3>Opción B · Base Superset · Recomendada (4–5 meses)</h3>
+        <p>Instalamos <strong>Apache Superset</strong> gratis en nuestro servidor, le ponemos nuestra marca y plantillas, y lo conectamos a Cube. Ya trae 40+ gráficos listos.</p>
+      </div>
+    </div>
+    <p style="margin-top:12px;"><strong>Clave:</strong> como los pisos 1 al 4 (datos + Cube) son idénticos, si mañana decidimos pasar a la Opción A <strong>solo cambiamos el piso 5</strong> sin rehacer datos ni medidas.</p>
+  </div>
+
+  <div class="card accent">
+    <h2>4. Cómo trabajamos los 3 + agentes sin pisarnos</h2>
+    <p><strong>Equipo real:</strong> nuestro <strong>Jefe</strong> (prioriza metas con negocio, desbloquea accesos y da el Go/No-Go) + <strong>Rafael y Osmerlys</strong> divididos en dos carriles independientes. En Fase 0 diseñamos <strong>juntos</strong> los agentes (<code>AGENTS.md</code>) y luego cada uno dirige su equipo de agentes.</p>
+    <h3 style="color:#F0A06B;">Ejemplo práctico: ¿cómo hace medidas uno sin esperar la ingesta del otro?</h3>
+    <ol>
+      <li><strong>Día 1 (juntos):</strong> acordamos en <code>contracts/</code> el <strong>molde exacto</strong> de <code>oro.fact_ventas</code> (<code>fecha</code>, <code>id_tienda</code>, <code>id_producto</code>, <code>venta_neta</code>, <code>costo_total</code>, <code>unidades</code>) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</li>
+      <li><strong>En paralelo:</strong> <strong>Carril 1 (Datos)</strong> conecta DWH/ERP y limpia en dbt hasta entregar esas mismas 6 columnas reales; <strong>Carril 2 (Semántica + BI)</strong> ya escribe <code>Venta Neta</code>, <code>Margen %</code>, RLS y arma los 3 tableros en Superset sobre esas 2.000 filas (una fórmula solo necesita nombres de columna).</li>
+      <li><strong>Cierre de sprint (cambio de enchufe):</strong> Cube cambia la conexión de <em>DuckDB prueba → Trino datos reales</em> (sin tocar medidas ni tableros) y verificamos conciliación 100% contra DWH / Power BI.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>5. Metodología: Sprints de 2 semanas (4 puntos de encuentro)</h2>
+    <div class="grid">
+      <div class="mini"><h3>Día 1 · Los 3 (1 h)</h3><p>Planning con el jefe + firma de <code>contracts/</code> y fixtures antes de lanzar agentes.</p></div>
+      <div class="mini"><h3>Días 2–8 · En paralelo</h3><p>Cada uno trabaja con sus agentes en ramas aisladas + Daily de <strong>10 min</strong> + revisión cruzada de PRs.</p></div>
+      <div class="mini"><h3>Día 9 · Rafael y Osmerlys (2 h)</h3><p>Integración (cambio de enchufe) y conciliación automática contra DWH / Power BI.</p></div>
+      <div class="mini hl"><h3>Día 10 · Los 3 (45 min)</h3><p>Demo en vivo con datos reales conciliados y aprobación <strong>Go / No-Go</strong> del jefe.</p></div>
+    </div>
+  </div>
+
+  <footer>Osmerlys Tochon · En la incomodidad hay crecimiento · Plataforma de Analítica Autoservicio</footer>
+</div>
+</body>
+</html>

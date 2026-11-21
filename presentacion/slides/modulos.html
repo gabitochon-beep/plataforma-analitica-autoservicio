@@ -1,0 +1,13 @@
+<section id="modulos">
+<div class="head"><p class="kicker">Cómo se organiza</p><h2>Un monorepo: 5 módulos y contratos compartidos</h2></div>
+<div class="stack">
+<div class="row key"><h3>0 · Contratos (contracts/)</h3><p class="body">Esquemas de tablas Oro, catálogo de medidas, reglas RLS y datos sintéticos — se acuerdan primero</p></div>
+<div class="row"><h3>1 · Infraestructura</h3><p class="body">Docker Compose, MinIO/S3, Iceberg, Trino, Keycloak y pipelines de CI/CD</p></div>
+<div class="row"><h3>2 · Ingesta (Bronce)</h3><p class="body">Conectores Airbyte/dlt/CDC y orquestación Dagster desde DWH y sistemas fuente</p></div>
+<div class="row"><h3>3 · Transformación (dbt)</h3><p class="body">Modelos medallón Bronce → Plata → Oro y pruebas automáticas de calidad</p></div>
+<div class="row"><h3>4 · Semántica y BI</h3><p class="body">Cube Core (medidas YAML + RLS) y Apache Superset (tema, roles y plantillas)</p></div>
+</div>
+<p class="small muted">Cada módulo tiene su propio AGENTS.md: un agente puede leer contracts/, pero solo edita su módulo.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
+<aside>Antes de construir, congelamos los contratos en contracts/. Así el equipo de datos y el de BI avanzan sin adivinar nombres ni esperar al otro.</aside>
+</section>
