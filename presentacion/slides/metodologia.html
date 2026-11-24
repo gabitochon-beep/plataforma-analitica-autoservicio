@@ -1,28 +1,28 @@
-<section id="metodologia" class="alt">
-<div class="head"><p class="kicker">Metodología de trabajo</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
-<div class="cards">
+<section id="metodologia" class="compact">
+<div class="head"><p class="kicker">Apéndice Técnico · 3 / 3 · Metodología operativa</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
+<div class="grid-2x2">
 <div class="card hl">
-<p class="tagline">Día 1 · Los 3 (1 hora)</p>
+<p class="tagline">Día 1 · Los 3 (1 h + pre-refinement 30 m)</p>
 <h3>1 · Planning y Contratos</h3>
-<p class="body">El jefe fija la meta del sprint. Rafael y tú congelan <strong>contracts/</strong> (tablas, medidas y fixtures) antes de lanzar agentes.</p>
+<p class="body">El Jefe fija la meta del sprint. Carril 1 y Carril 2 congelan <code>contracts/</code> y fixtures antes de lanzar agentes (<em>scope freeze</em> durante el sprint).</p>
 </div>
 <div class="card">
-<p class="tagline">Días 2–8 · En paralelo</p>
+<p class="tagline">Días 2–7 · En paralelo</p>
 <h3>2 · Ejecución + Daily 10 min</h3>
-<p class="body">Cada uno trabaja con su equipo de agentes en ramas aisladas. Sincronización diaria de 10 min y revisión cruzada de PRs.</p>
+<p class="body">Cada carril opera sus agentes en ramas aisladas (y worktrees). Revisión cruzada diaria de PRs y 20% de capacidad reservada para deuda técnica y auditoría.</p>
 </div>
 <div class="card">
-<p class="tagline">Día 9 · Rafael y tú (2 h)</p>
-<h3>3 · Integración y QA</h3>
-<p class="body">Cambio de enchufe en Cube (prueba → datos reales) y corrida automática de conciliación contra DWH / Power BI.</p>
+<p class="tagline">Días 8–9 · Carril 1 y Carril 2</p>
+<h3>3 · Integración real y QA</h3>
+<p class="body">Cambio de enchufe en staging (prueba → Trino real), pruebas de rendimiento, RLS y conciliación 100% contra DWH / Power BI.</p>
 </div>
-<div class="card" style="background:#E2702A; color:#13202E;">
-<p class="tagline" style="color:#13202E;">Día 10 · Los 3 (45 min)</p>
-<h3 style="color:#13202E;">4 · Demo y Go / No-Go</h3>
-<p class="body" style="color:#13202E;">Demo en vivo con datos reales conciliados. El jefe valida valor de negocio y aprueba el paso al siguiente sprint.</p>
+<div class="card accent">
+<p class="tagline">Día 10 · Los 3 (45 min)</p>
+<h3>4 · Demo y Go / No-Go</h3>
+<p class="body">Demo en vivo con datos reales conciliados. El Jefe valida valor de negocio y aprueba el paso al siguiente sprint (con respaldo cruzado ante ausencias).</p>
 </div>
 </div>
-<p class="small muted">Regla de cierre (Definition of Done): nada se entrega sin pruebas de contrato en verde, conciliación 100% contra DWH y aprobación humana.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>18</span></div>
-<aside>Una metodología simple y sin burocracia: 4 puntos de encuentro claros cada 2 semanas. Los agentes ejecutan rápido en paralelo; los humanos controlan los contratos, la integración y la aprobación final.</aside>
+<p class="small muted">Definition of Done: pruebas de contrato en verde, conciliación 100% contra DWH, RLS validado, revisión humana y catálogo documentado.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>20</span></div>
+<aside>Scrum ligero sin burocracia con 4 puntos claros de encuentro cada 2 semanas, scope freeze, 20% para auditoría de código generado por agentes y 2 días dedicados a integración real y conciliación.</aside>
 </section>

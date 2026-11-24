@@ -117,34 +117,33 @@
 <h2>Todos los líderes convergen en el mismo patrón: medidas gobernadas una vez y el negocio compone encima.</h2>
 <p class="lead">Por eso la capa semántica es una pieza propia e independiente, y el front se vuelve intercambiable.</p>
 <div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>5</span></div>
-</section></div><div class="slide-wrap" data-slide="usuarios"><section id="usuarios">
+</section></div><div class="slide-wrap" data-slide="usuarios"><section id="usuarios" class="compact">
 <div class="head"><p class="kicker">Dimensión · AS-IS vs TO-BE</p><h2>De cargar con cada tablero a gobernar una sola base</h2></div>
-<div class="row" style="background:#E8E3D8; border-left:8px solid #B5501A; padding:22px 32px;">
-<h3 style="width:300px; color:#B5501A;">AS-IS · Hoy</h3>
-<p class="body">El <strong>Analista / Equipo de Datos</strong> crea cada tablero y queda responsable de su funcionalidad, mantenimiento y optimización — acumulando toda la cola de pedidos del negocio.</p>
+<div class="row" style="background:#E8E3D8; border-left:8px solid #B5501A; padding:18px 28px;">
+<h3 style="width:260px; color:#B5501A;">AS-IS · Hoy</h3>
+<p class="body" style="font-size:24px;">El <strong>Analista / Equipo de Datos</strong> crea cada tablero y carga con su funcionalidad, mantenimiento y optimización — acumulando toda la cola de pedidos del negocio.</p>
 </div>
 <div class="cards">
 <div class="card"><p class="tagline">TO-BE · Consume</p><h3>Gerencia, tiendas, comercial</h3><p class="body">Ve tableros publicados, filtra, exporta y recibe alertas con números consistentes.</p></div>
-<div class="card"><p class="tagline">TO-BE · Crea (autoservicio)</p><h3>Analistas de área</h3><p class="body">Arman sus propios tableros con medidas certificadas y plantillas, sin depender de la cola técnica.</p></div>
-<div class="card hl"><p class="tagline">TO-BE · Garantiza y evoluciona</p><h3>Equipo / Analistas de datos</h3><p class="body">Dejan de mantener cada tablero en cola; se enfocan en ingesta, modelado, crear y certificar medidas, SQL, seguridad y optimización central.</p></div>
+<div class="card"><p class="tagline">TO-BE · Crea (autoservicio)</p><h3>Analistas de área</h3><p class="body">Arman sus propios tableros con medidas certificadas y plantillas, sin entrar a la cola técnica.</p></div>
+<div class="card hl"><p class="tagline">TO-BE · Garantiza y evoluciona</p><h3>Equipo / Analistas de datos</h3><p class="body">Dejan de mantener cada tablero en cola; se enfocan en datos, certificar medidas, SQL, seguridad y optimización central.</p></div>
 </div>
-<p class="small muted">Por confirmar: usuarios y concurrencia, volumen del DWH, sistemas fuente, frecuencia de actualización, nube u on-premise.</p>
+<p class="small muted">En Fase 0 confirmamos: usuarios concurrentes, volumen del DWH, sistemas fuente, frecuencia de carga y nube vs. on-premise.</p>
 <div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>6</span></div>
 <aside>AS-IS: hoy el analista de datos y el equipo de datos cargan con crear, mantener y optimizar cada tablero en cola. TO-BE: unificamos su rol en gobernar una sola base y certificar medidas para que las áreas creen sus tableros.</aside>
-</section></div><div class="slide-wrap" data-slide="alcance"><section id="alcance" class="alt">
+</section></div><div class="slide-wrap" data-slide="alcance"><section id="alcance" class="alt compact">
 <div class="head"><p class="kicker">Alcance</p><h2>El MVP: un dominio de punta a punta</h2></div>
 <div class="cols">
 <div class="col"><h3>En el MVP · Ventas y Margen</h3>
-<ul style="font-size:26px; gap:8px;">
-<li>Ingesta del DWH y un sistema fuente</li>
+<ul style="font-size:24px; gap:8px;">
+<li>Ingesta del DWH (y 1er sistema fuente según Fase 0)</li>
 <li>Lago bronce → plata → oro de Ventas</li>
-<li>20–30 medidas base certificadas (cientos de vistas al cruzar dimensiones)</li>
-<li>Constructor de arrastrar y soltar</li>
-<li>10–12 gráficos y 3 plantillas (Gerencial, Tienda, Categoría)</li>
-<li>Seguridad por fila e inicio de sesión corporativo</li>
+<li>20–30 medidas base certificadas (cientos de vistas)</li>
+<li>Constructor arrastrar y soltar · 10–12 gráficos</li>
+<li>3 plantillas (Gerencial, Tienda, Categoría) + SSO y RLS</li>
 </ul></div>
 <div class="col"><h3 class="muted">Fases siguientes</h3>
-<ul class="muted" style="font-size:26px; gap:8px;">
+<ul class="muted" style="font-size:24px; gap:8px;">
 <li>Inventario y Promociones</li>
 <li>Medidas en borrador por área y flujo de certificación</li>
 <li>Alertas y suscripciones por correo</li>
@@ -152,30 +151,18 @@
 <li>Modelos predictivos de demanda</li>
 </ul></div>
 </div>
-<div class="row key" style="padding:18px 28px; gap:28px;">
-<h3 style="width:340px; font-size:24px;">Ejemplos de medidas base</h3>
-<p class="body" style="font-size:22px; line-height:1.35;">Venta Bruta · Descuentos · Devoluciones · Venta Neta · Costo · Margen $ · Margen % · Unidades · Tickets · Ticket Promedio · Variación YoY / MoM · % Meta · Mix % · SKUs y Tiendas Activas &nbsp;<span style="color:#F0A06B;">(combinables por Tienda, Región, Categoría, Marca, SKU, Canal y Fecha)</span></p>
+<div class="row key" style="padding:16px 26px; gap:24px;">
+<h3 style="width:310px; font-size:23px;">Ejemplos de medidas base</h3>
+<p class="body" style="font-size:21px; line-height:1.35;">Venta Bruta · Descuentos · Devoluciones · Venta Neta · Costo · Margen $ · Margen % · Unidades · Tickets · Ticket Promedio · Variación YoY/MoM · % Meta · Mix % · SKUs y Tiendas Activas &nbsp;<span style="color:#F0A06B;">(cruzables por Tienda, Región, Categoría, Marca, SKU, Canal y Fecha)</span></p>
 </div>
 <p class="small muted">Fuera de alcance: reemplazar el DWH actual, migrar todos los reportes existentes, usuarios externos.</p>
 <div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>7</span></div>
 <aside>Con 20 a 30 medidas base de Ventas y Margen combinables libremente por cualquier dimensión se cubren cientos de vistas y el 80–90% de las preguntas diarias del negocio.</aside>
-</section></div><div class="slide-wrap" data-slide="arquitectura"><section id="arquitectura">
-<div class="head"><p class="kicker">Arquitectura de referencia</p><h2>Cinco capas; solo la última cambia</h2></div>
-<div class="stack">
-<div class="row"><h3>1 · Ingesta</h3><p class="body">Airbyte / dlt para cargas · Debezium CDC desde ERP/POS · Dagster orquesta</p></div>
-<div class="row"><h3>2 · Lago de datos</h3><p class="body">Apache Iceberg sobre almacenamiento de objetos · dbt · bronce → plata → oro</p></div>
-<div class="row"><h3>3 · Motor de consulta</h3><p class="body">Trino en producción · DuckDB en desarrollo y pruebas</p></div>
-<div class="row key"><h3>4 · Capa semántica</h3><p class="body">Cube Core: medidas certificadas en YAML (git), seguridad por fila, caché y API</p></div>
-<div class="row"><h3>5 · Experiencia</h3><p class="body">Opción A: front propio en React · Opción B: Apache Superset personalizado</p></div>
-</div>
-<p class="small muted">Transversal a todas las capas: SSO y roles, catálogo y linaje, calidad de datos, monitoreo y costos, todo como código.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>8</span></div>
-<aside>Fuentes: DWH actual, ERP/POS y otros sistemas. Las capas 1 a 4 son idénticas en ambas opciones.</aside>
-</section></div><div class="slide-wrap" data-slide="diagrama-arquitectura"><section id="diagrama-arquitectura">
-<div class="head"><p class="kicker">Diagrama de arquitectura y flujo de datos</p><h2>De las fuentes al usuario — 100+ concurrentes sin tocar el DWH</h2></div>
+</section></div><div class="slide-wrap" data-slide="diagrama-arquitectura"><section id="diagrama-arquitectura" class="compact">
+<div class="head"><p class="kicker">Arquitectura de 5 capas y flujo de datos</p><h2>De las fuentes al usuario · 100+ concurrentes</h2></div>
 
-<div style="flex:1; display:flex; align-items:center; justify-content:center;">
-<svg viewBox="0 0 1664 600" width="1664" height="600" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; max-height:600px; font-family:'Inter',sans-serif;">
+<div style="flex:1; min-height:0; display:flex; align-items:center; justify-content:center;">
+<svg viewBox="0 0 1664 600" width="1664" height="600" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; max-height:100%; font-family:'Inter',sans-serif;">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 1 L 10 5 L 0 9 z" fill="#13202E"/>
@@ -185,128 +172,123 @@
     </marker>
   </defs>
 
-  <!-- 1. FUENTES -->
-  <rect x="0" y="70" width="225" height="370" rx="16" fill="#E8E3D8" stroke="#CFC8B8" stroke-width="2"/>
-  <text x="112" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.5">FUENTES</text>
-  <rect x="20" y="130" width="185" height="72" rx="10" fill="#FFFDF8"/>
-  <text x="112" y="162" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">DWH Actual</text>
-  <text x="112" y="187" text-anchor="middle" font-size="15" fill="#5A6573">Se mantiene intacto</text>
-  <rect x="20" y="218" width="185" height="72" rx="10" fill="#FFFDF8"/>
-  <text x="112" y="250" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">ERP / POS</text>
-  <text x="112" y="275" text-anchor="middle" font-size="15" fill="#5A6573">Sistemas fuente</text>
-  <rect x="20" y="306" width="185" height="72" rx="10" fill="#FFFDF8"/>
-  <text x="112" y="338" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">Otras fuentes</text>
-  <text x="112" y="363" text-anchor="middle" font-size="15" fill="#5A6573">CRM / Metas / CSV</text>
+  <!-- FUENTES -->
+  <rect x="0" y="56" width="225" height="394" rx="16" fill="#E8E3D8" stroke="#CFC8B8" stroke-width="2"/>
+  <text x="112" y="94" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.4">FUENTES</text>
+  <rect x="18" y="116" width="189" height="82" rx="10" fill="#FFFDF8"/>
+  <text x="112" y="152" text-anchor="middle" font-size="21" font-weight="700" fill="#13202E">DWH Actual</text>
+  <text x="112" y="180" text-anchor="middle" font-size="16" fill="#5A6573">Sin sobrecarga</text>
+  <rect x="18" y="214" width="189" height="82" rx="10" fill="#FFFDF8"/>
+  <text x="112" y="250" text-anchor="middle" font-size="21" font-weight="700" fill="#13202E">ERP / POS</text>
+  <text x="112" y="278" text-anchor="middle" font-size="16" fill="#5A6573">Sistemas fuente</text>
+  <rect x="18" y="312" width="189" height="82" rx="10" fill="#FFFDF8"/>
+  <text x="112" y="348" text-anchor="middle" font-size="21" font-weight="700" fill="#13202E">Otras fuentes</text>
+  <text x="112" y="376" text-anchor="middle" font-size="16" fill="#5A6573">Metas / CRM</text>
 
-  <!-- Arrow 1->2 -->
-  <line x1="225" y1="255" x2="262" y2="255" stroke="#13202E" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="225" y1="252" x2="262" y2="252" stroke="#13202E" stroke-width="3.5" marker-end="url(#arrow)"/>
 
-  <!-- 2. INGESTA -->
-  <rect x="270" y="70" width="215" height="370" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
-  <text x="377" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.5">1 · INGESTA</text>
-  <rect x="290" y="135" width="175" height="96" rx="10" fill="#F4F1EA"/>
-  <text x="377" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#13202E">Airbyte / dlt</text>
-  <text x="377" y="198" text-anchor="middle" font-size="15" fill="#5A6573">Debezium (CDC)</text>
-  <text x="377" y="219" text-anchor="middle" font-size="14" fill="#5A6573">Extracción segura</text>
-  <rect x="290" y="252" width="175" height="96" rx="10" fill="#F4F1EA"/>
-  <text x="377" y="292" text-anchor="middle" font-size="19" font-weight="700" fill="#13202E">Dagster</text>
-  <text x="377" y="318" text-anchor="middle" font-size="15" fill="#5A6573">Orquestación y</text>
-  <text x="377" y="338" text-anchor="middle" font-size="15" fill="#5A6573">alertas de carga</text>
+  <!-- 1. INGESTA -->
+  <rect x="270" y="56" width="215" height="394" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
+  <text x="377" y="94" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.4">1 · INGESTA</text>
+  <rect x="288" y="122" width="179" height="110" rx="10" fill="#F4F1EA"/>
+  <text x="377" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">Airbyte / dlt</text>
+  <text x="377" y="194" text-anchor="middle" font-size="16" fill="#5A6573">Debezium (CDC)</text>
+  <rect x="288" y="252" width="179" height="110" rx="10" fill="#F4F1EA"/>
+  <text x="377" y="294" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">Dagster</text>
+  <text x="377" y="324" text-anchor="middle" font-size="16" fill="#5A6573">Orquestación</text>
 
-  <!-- Arrow 2->3 -->
-  <line x1="485" y1="255" x2="522" y2="255" stroke="#13202E" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="485" y1="252" x2="522" y2="252" stroke="#13202E" stroke-width="3.5" marker-end="url(#arrow)"/>
 
-  <!-- 3. LAGO MEDALLON + MOTOR -->
-  <rect x="530" y="70" width="320" height="370" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
-  <text x="690" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.5">2 y 3 · LAGO + MOTOR SQL</text>
+  <!-- 2 y 3. LAGO + MOTOR -->
+  <rect x="530" y="56" width="320" height="394" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
+  <text x="690" y="94" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.4">2 y 3 · LAGO + MOTOR</text>
 
-  <rect x="550" y="128" width="280" height="62" rx="10" fill="#EFE7DA"/>
-  <text x="572" y="165" font-size="18" font-weight="700" fill="#8C5220">Bronce</text>
-  <text x="655" y="165" font-size="16" fill="#3A4654">Dato crudo histórico</text>
+  <rect x="548" y="114" width="284" height="68" rx="10" fill="#EFE7DA"/>
+  <text x="570" y="155" font-size="20" font-weight="700" fill="#8C5220">Bronce</text>
+  <text x="664" y="155" font-size="17" fill="#3A4654">Dato crudo</text>
 
-  <rect x="550" y="202" width="280" height="62" rx="10" fill="#E6ECF0"/>
-  <text x="572" y="239" font-size="18" font-weight="700" fill="#3A4654">Plata</text>
-  <text x="655" y="239" font-size="16" fill="#3A4654">dbt limpia y valida</text>
+  <rect x="548" y="194" width="284" height="68" rx="10" fill="#E6ECF0"/>
+  <text x="570" y="235" font-size="20" font-weight="700" fill="#3A4654">Plata</text>
+  <text x="664" y="235" font-size="17" fill="#3A4654">dbt limpia y valida</text>
 
-  <rect x="550" y="276" width="280" height="62" rx="10" fill="#FBE5C8"/>
-  <text x="572" y="313" font-size="18" font-weight="700" fill="#9A4A0B">Oro</text>
-  <text x="655" y="313" font-size="16" fill="#13202E">Hechos y dimensiones</text>
+  <rect x="548" y="274" width="284" height="68" rx="10" fill="#FBE5C8"/>
+  <text x="570" y="315" font-size="20" font-weight="700" fill="#9A4A0B">Oro</text>
+  <text x="664" y="315" font-size="17" fill="#13202E">Tablas de negocio</text>
 
-  <rect x="550" y="354" width="280" height="66" rx="10" fill="#13202E"/>
-  <text x="690" y="383" text-anchor="middle" font-size="17" font-weight="700" fill="#F0A06B">Apache Iceberg · Trino / DuckDB</text>
-  <text x="690" y="406" text-anchor="middle" font-size="14" fill="#C9D1DA">Consultas SQL rápidas a escala</text>
+  <rect x="548" y="356" width="284" height="74" rx="10" fill="#13202E"/>
+  <text x="690" y="388" text-anchor="middle" font-size="18" font-weight="700" fill="#F0A06B">Iceberg · Trino / DuckDB</text>
+  <text x="690" y="414" text-anchor="middle" font-size="16" fill="#C9D1DA">Motor SQL a escala</text>
 
-  <!-- Arrow 3->4 -->
-  <line x1="850" y1="255" x2="887" y2="255" stroke="#E2702A" stroke-width="4" marker-end="url(#arrow-orange)"/>
+  <line x1="850" y1="252" x2="887" y2="252" stroke="#E2702A" stroke-width="4" marker-end="url(#arrow-orange)"/>
 
-  <!-- 4. CAPA SEMANTICA (EL CORAZON) -->
-  <rect x="895" y="44" width="350" height="422" rx="18" fill="#13202E" stroke="#E2702A" stroke-width="4"/>
-  <text x="1070" y="84" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#F0A06B" letter-spacing="1.5">4 · CAPA SEMÁNTICA (CORAZÓN)</text>
-  <text x="1070" y="120" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="700" fill="#FFFDF8">Cube Core</text>
+  <!-- 4. CAPA SEMANTICA -->
+  <rect x="895" y="32" width="350" height="442" rx="18" fill="#13202E" stroke="#E2702A" stroke-width="4"/>
+  <text x="1070" y="72" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#F0A06B" letter-spacing="1.4">4 · CAPA SEMÁNTICA</text>
+  <text x="1070" y="110" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="700" fill="#FFFDF8">Cube Core</text>
 
-  <rect x="920" y="140" width="300" height="66" rx="10" fill="#1E3045"/>
-  <text x="1070" y="170" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFDF8">Medidas certificadas (YAML)</text>
-  <text x="1070" y="193" text-anchor="middle" font-size="14" fill="#C9D1DA">Una sola fórmula oficial en Git</text>
+  <rect x="918" y="130" width="304" height="70" rx="10" fill="#1E3045"/>
+  <text x="1070" y="162" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFDF8">Medidas certificadas</text>
+  <text x="1070" y="188" text-anchor="middle" font-size="16" fill="#C9D1DA">Fórmulas YAML en Git</text>
 
-  <rect x="920" y="218" width="300" height="66" rx="10" fill="#1E3045"/>
-  <text x="1070" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFDF8">Seguridad por fila (RLS)</text>
-  <text x="1070" y="271" text-anchor="middle" font-size="14" fill="#C9D1DA">Filtro automático por tienda / rol</text>
+  <rect x="918" y="212" width="304" height="70" rx="10" fill="#1E3045"/>
+  <text x="1070" y="244" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFDF8">Seguridad por fila (RLS)</text>
+  <text x="1070" y="270" text-anchor="middle" font-size="16" fill="#C9D1DA">Filtro por tienda y rol</text>
 
-  <rect x="920" y="296" width="300" height="82" rx="10" fill="#E2702A"/>
-  <text x="1070" y="328" text-anchor="middle" font-size="18" font-weight="700" fill="#13202E">Memoria rápida precalculada</text>
-  <text x="1070" y="352" text-anchor="middle" font-size="15" font-weight="600" fill="#13202E">100+ usuarios a la vez en ms</text>
-  <text x="1070" y="370" text-anchor="middle" font-size="13" fill="#13202E">Sin recalcular ni tocar el DWH</text>
+  <rect x="918" y="294" width="304" height="90" rx="10" fill="#E2702A"/>
+  <text x="1070" y="328" text-anchor="middle" font-size="19" font-weight="700" fill="#13202E">Memoria rápida precalculada</text>
+  <text x="1070" y="354" text-anchor="middle" font-size="16" font-weight="700" fill="#13202E">100+ usuarios a la vez en ms</text>
+  <text x="1070" y="376" text-anchor="middle" font-size="15" fill="#13202E">Sin tocar el DWH</text>
 
-  <text x="1070" y="424" text-anchor="middle" font-size="16" font-weight="600" fill="#F0A06B">API SQL (tipo PostgreSQL) · REST</text>
-  <text x="1070" y="446" text-anchor="middle" font-size="14" fill="#A9B3BF">Independiente de la pantalla</text>
+  <text x="1070" y="424" text-anchor="middle" font-size="17" font-weight="700" fill="#F0A06B">API SQL (PostgreSQL) · REST</text>
+  <text x="1070" y="450" text-anchor="middle" font-size="16" fill="#C9D1DA">Independiente del front</text>
 
-  <!-- Arrow 4->5 -->
-  <line x1="1245" y1="255" x2="1282" y2="255" stroke="#E2702A" stroke-width="4" marker-end="url(#arrow-orange)"/>
+  <line x1="1245" y1="252" x2="1282" y2="252" stroke="#E2702A" stroke-width="4" marker-end="url(#arrow-orange)"/>
 
-  <!-- 5. EXPERIENCIA + USUARIOS -->
-  <rect x="1290" y="70" width="374" height="370" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
-  <text x="1477" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.5">5 · EXPERIENCIA BI</text>
+  <!-- 5. EXPERIENCIA BI -->
+  <rect x="1290" y="56" width="374" height="394" rx="16" fill="#FFFDF8" stroke="#CFC8B8" stroke-width="2"/>
+  <text x="1477" y="94" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.4">5 · EXPERIENCIA BI</text>
 
-  <rect x="1312" y="128" width="330" height="88" rx="12" fill="#13202E"/>
-  <text x="1477" y="160" text-anchor="middle" font-size="19" font-weight="700" fill="#F0A06B">Opción B · Apache Superset</text>
-  <text x="1477" y="186" text-anchor="middle" font-size="15" fill="#C9D1DA">Recomendada MVP · $0 licencias</text>
-  <text x="1477" y="206" text-anchor="middle" font-size="14" fill="#A9B3BF">40+ gráficos · plantillas · drag &amp; drop</text>
+  <rect x="1310" y="114" width="334" height="96" rx="12" fill="#13202E"/>
+  <text x="1477" y="150" text-anchor="middle" font-size="20" font-weight="700" fill="#F0A06B">Opción B · Apache Superset</text>
+  <text x="1477" y="178" text-anchor="middle" font-size="16" fill="#C9D1DA">Recomendada · 40+ gráficos</text>
+  <text x="1477" y="200" text-anchor="middle" font-size="16" fill="#A9B3BF">Drag &amp; drop · plantillas</text>
 
-  <rect x="1312" y="230" width="330" height="72" rx="12" fill="#F4F1EA" stroke="#CFC8B8" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="1477" y="262" text-anchor="middle" font-size="18" font-weight="700" fill="#3A4654">Opción A · Evolución (React)</text>
-  <text x="1477" y="286" text-anchor="middle" font-size="14" fill="#5A6573">Solo cambia este bloque; 1–4 intactos</text>
+  <rect x="1310" y="224" width="334" height="80" rx="12" fill="#F4F1EA" stroke="#CFC8B8" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="1477" y="258" text-anchor="middle" font-size="19" font-weight="700" fill="#3A4654">Opción A · Evolución (React)</text>
+  <text x="1477" y="286" text-anchor="middle" font-size="16" fill="#5A6573">Solo cambia el piso 5</text>
 
-  <rect x="1312" y="318" width="330" height="98" rx="12" fill="#E8E3D8"/>
-  <text x="1477" y="352" text-anchor="middle" font-size="19" font-weight="700" fill="#13202E">100+ Usuarios concurrentes</text>
-  <text x="1477" y="378" text-anchor="middle" font-size="15" fill="#3A4654">Gerencia · Tiendas · Analistas de área</text>
-  <text x="1477" y="400" text-anchor="middle" font-size="14" fill="#5A6573">Un solo tablero · cada uno ve su tienda</text>
+  <rect x="1310" y="318" width="334" height="110" rx="12" fill="#E8E3D8"/>
+  <text x="1477" y="354" text-anchor="middle" font-size="20" font-weight="700" fill="#13202E">100+ Usuarios concurrentes</text>
+  <text x="1477" y="382" text-anchor="middle" font-size="16" fill="#3A4654">Gerencia · Tiendas · Áreas</text>
+  <text x="1477" y="408" text-anchor="middle" font-size="16" fill="#5A6573">Cada uno ve solo su tienda</text>
 
   <!-- TRANSVERSAL BAR -->
-  <rect x="0" y="502" width="1664" height="78" rx="14" fill="#E8E3D8" stroke="#13202E" stroke-width="2"/>
-  <text x="832" y="534" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="17" font-weight="700" fill="#B5501A" letter-spacing="1.2">CAPA TRANSVERSAL EN TODO EL FLUJO</text>
-  <text x="832" y="562" text-anchor="middle" font-size="19" font-weight="600" fill="#13202E">SSO / Ciberseguridad / RLS &nbsp;·&nbsp; Catálogo y Linaje &nbsp;·&nbsp; Calidad y Conciliación (QA) &nbsp;·&nbsp; CI/CD y Monitoreo</text>
+  <rect x="0" y="502" width="1664" height="82" rx="14" fill="#E8E3D8" stroke="#13202E" stroke-width="2"/>
+  <text x="832" y="534" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#B5501A" letter-spacing="1.2">CAPA TRANSVERSAL EN TODO EL FLUJO</text>
+  <text x="832" y="566" text-anchor="middle" font-size="20" font-weight="600" fill="#13202E">SSO / Ciberseguridad / RLS &nbsp;·&nbsp; Catálogo y Linaje &nbsp;·&nbsp; Calidad y Conciliación (QA) &nbsp;·&nbsp; CI/CD y Monitoreo</text>
 </svg>
 </div>
 
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>9</span></div>
-<aside>Este diagrama resume todo el viaje del dato: las fuentes se copian sin sobrecargarse, pasan por Bronce-Plata-Oro, y Cube atiende en milisegundos a más de 100 usuarios simultáneos desde memoria rápida aplicando seguridad por tienda.</aside>
-</section></div><div class="slide-wrap" data-slide="opciones"><section id="opciones" class="alt">
-<div class="head"><p class="kicker">Las dos opciones</p><h2>Dos caminos sobre la misma base (ambos sin licencias)</h2></div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>8</span></div>
+<aside>Los pisos 1 al 4 son idénticos en cualquier opción; solo cambia el piso 5. Cube atiende en milisegundos a más de 100 usuarios simultáneos desde memoria rápida sin tocar el DWH.</aside>
+</section></div><div class="slide-wrap" data-slide="opciones"><section id="opciones" class="alt compact">
+<div class="head"><p class="kicker">Las dos opciones · Ambos $0 en licencias de BI</p><h2>Dos caminos sobre la misma base</h2></div>
 <div class="cards">
-<div class="card"><p class="tagline">Opción A · $0 licencias</p><h3>Interfaz hecha desde cero</h3><p class="body">Programamos toda la pantalla a la medida (React + ECharts) sobre las medidas de Cube.</p>
-<ul class="body"><li>Experiencia 100% a la medida</li><li>Plantillas e IA donde queramos</li><li>Más tiempo y mantenimiento propio</li></ul>
+<div class="card"><p class="tagline">Opción A · Interfaz desde cero</p><h3>Front a la medida (React + ECharts)</h3><p class="body">Programamos toda la pantalla de gráficos y arrastrar/soltar desde cero sobre las medidas de Cube.</p>
+<ul class="body" style="font-size:24px; gap:8px;"><li>Experiencia 100% a la medida</li><li>Plantillas e IA donde queramos</li><li>Doble tiempo y mantenimiento propio permanente</li></ul>
 <p class="num">7–9 meses · 6–8 personas</p></div>
 <div class="card hl">
 <div style="display:flex; justify-content:space-between; align-items:center; gap:20px;">
-<div><p class="tagline">Opción B · recomendada · $0 licencias</p><h3>Interfaz base open source</h3></div>
-<div style="background:#FFFFFF; border-radius:12px; padding:10px 18px; display:flex; align-items:center; flex-shrink:0;"><img src="assets/apache-superset-logo.png" alt="Apache Superset" style="height:64px; width:auto; display:block;"></div>
+<div><p class="tagline">Opción B · Recomendada</p><h3>Interfaz base open source</h3></div>
+<div style="background:#FFFFFF; border-radius:12px; padding:10px 18px; display:flex; align-items:center; flex-shrink:0;"><img src="assets/apache-superset-logo.png" alt="Apache Superset" style="height:60px; width:auto; display:block;"></div>
 </div>
-<p class="body">Adaptamos Apache Superset (gratuito, licencia Apache 2.0) con nuestra marca, conectado a Cube por su API SQL.</p>
-<ul class="body"><li>Pantalla probada, 40+ gráficos listos</li><li>Misma plataforma propia, mitad de tiempo</li><li>Menos control fino de la experiencia</li></ul>
-<p class="num">4–5 meses · 4–5 personas</p></div>
+<p class="body">Adaptamos Apache Superset (gratuito, Apache 2.0) con nuestra marca, conectado a Cube por su API SQL.</p>
+<ul class="body" style="font-size:24px; gap:8px;"><li>Pantalla probada, 40+ gráficos listos</li><li>Misma plataforma propia, mitad de tiempo</li><li>Equipo núcleo de 3 + agentes + apoyo puntual TI</li></ul>
+<p class="num">4–5 meses* · 3 personas + IA</p></div>
 </div>
-<p class="small muted">Estimaciones referenciales; se ajustan al confirmar dimensión e infraestructura.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>10</span></div>
+<p class="small muted">*4–5 meses (MVP DWH; 5–6 meses si incluye CDC ERP) tras cerrar infra/accesos en Fase 0. Sin agentes equivaldría a 4–5 personas. Costos reales: solo infraestructura y tokens de agentes (se cierran en Fase 0).</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>9</span></div>
+<aside>Aclaramos la ecuación de equipo: sin agentes la Opción B toma 4–5 personas; con nuestro núcleo de 3 + agentes + apoyo puntual de TI para infraestructura logramos ese mismo alcance, con $0 en licencias de BI y solo costo de infraestructura y tokens de IA.</aside>
 </section></div><div class="slide-wrap" data-slide="superset-vista"><section id="superset-vista">
 <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px;">
 <div class="head"><p class="kicker">Cómo se ve la Opción B · $0 licencias</p><h2>Apache Superset conectado a nuestro modelo</h2></div>
@@ -319,173 +301,206 @@
 <h3 style="width:360px;">Conexión al modelo</h3>
 <p class="body">DWH / Sistemas → Lago Iceberg + dbt (Oro) → Trino → <strong>Cube Core (API SQL tipo PostgreSQL)</strong> → Apache Superset</p>
 </div>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>11</span></div>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>10</span></div>
 <aside>Apache Superset es 100% gratuito (Apache 2.0). Se conecta a Cube como si fuera una base de datos PostgreSQL: el usuario arrastra medidas ya certificadas sin escribir SQL ni DAX.</aside>
-</section></div><div class="slide-wrap" data-slide="comparativa"><section id="comparativa">
-<div class="head"><p class="kicker">Comparativa</p><h2>B llega en la mitad del tiempo</h2></div>
-<table>
-<tr><th style="width:520px;">Criterio</th><th>Opción A · Interfaz desde cero</th><th>Opción B · Base Superset</th></tr>
-<tr><td class="strong">Tiempo al MVP</td><td>7–9 meses</td><td>4–5 meses</td></tr>
-<tr><td class="strong">Experiencia de arrastrar y soltar</td><td>Excelente, a la medida</td><td>Buena, estándar de Superset</td></tr>
-<tr><td class="strong">IA integrada</td><td>Nativa en el producto</td><td>Vía complemento</td></tr>
-<tr><td class="strong">Costo de licencias</td><td>Ninguno</td><td>Ninguno</td></tr>
-<tr><td class="strong">Riesgo técnico</td><td>Medio-alto</td><td>Bajo-medio</td></tr>
-<tr><td class="strong">Mantenimiento</td><td>Front propio a largo plazo</td><td>Actualizar versiones</td></tr>
-<tr><td class="strong">Reutilización al cambiar</td><td>Base y medidas 100%</td><td>Base y medidas 100%</td></tr>
+</section></div><div class="slide-wrap" data-slide="comparativa"><section id="comparativa" class="alt compact">
+<div class="head"><p class="kicker">Caso de negocio · Buy vs. Build (TCO)</p><h2>Por qué Opción B frente a seguir igual o comprar SaaS</h2></div>
+<table style="font-size:22px;">
+<tr><th style="width:310px;">Criterio</th><th>Status Quo<br>(Power BI Server)</th><th>SaaS Comercial<br>(PBI Pro / Fabric)</th><th style="color:#B5501A;">Opción B · Base Superset<br>(Recomendada)</th><th>Opción A · Interfaz<br>desde cero</th></tr>
+<tr><td class="strong">Licencias BI por usuario</td><td>Sin autoservicio gobernado</td><td>Recurrentes mensuales (crecen con usuarios)</td><td class="strong">$0 (Apache 2.0)</td><td>$0 (open source)</td></tr>
+<tr><td class="strong">Costos reales (TCO)</td><td>Horas perdidas + Excel</td><td>Licencias + capacidad cloud (lock-in)</td><td class="strong">Infraestructura + operación + tokens IA</td><td>Infra + doble equipo + mantenimiento</td></tr>
+<tr><td class="strong">Tiempo al MVP</td><td>Sin solución</td><td>3–4 meses (atado al proveedor)</td><td class="strong">4–5 meses (tras Fase 0)</td><td>7–9 meses</td></tr>
+<tr><td class="strong">Propiedad y control</td><td>Limitado</td><td>Dependencia de proveedor y precios</td><td class="strong">100% propia · sin lock-in</td><td>100% propia</td></tr>
+<tr><td class="strong">Reutilización futura</td><td>Baja</td><td>Difícil migrar fuera</td><td class="strong">100% (base + Cube sirven para A o PBI)</td><td>100%</td></tr>
 </table>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>12</span></div>
+<p class="small muted">En Fase 0 (Semana 4) entregamos la comparativa financiera cerrada a 3 años (TCO exacto: infraestructura + operación vs. licencias Power BI/Fabric) con la dimensión confirmada.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>11</span></div>
+<aside>No decimos que la Opción B sea "gratis": tiene costo de infraestructura, operación y tokens de IA, pero elimina licencias recurrentes por usuario y dependencia del proveedor. En Fase 0 cerramos el TCO exacto a 3 años.</aside>
 </section></div><div class="slide-wrap" data-slide="recomendacion"><section id="recomendacion" class="dark" style="justify-content:center;">
 <p class="kicker">Recomendación</p>
 <h1 style="font-size:96px;">Opción B ahora.<br>Opción A como evolución.</h1>
 <p class="lead muted">Validamos adopción y medidas con usuarios reales en 4–5 meses. Pasar al front propio solo cambia la capa visual: datos, medidas y seguridad se reutilizan.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>12</span></div>
+</section></div><div class="slide-wrap" data-slide="roadmap"><section id="roadmap" class="compact">
+<div class="head"><p class="kicker">Plan de fases · Puertas de aprobación (Stage-Gates)</p><h2>De fundaciones a escala con criterios medibles</h2></div>
+<div class="cards" style="gap:20px;">
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 0 · 4 sem</p>
+<h3>Fundaciones y PoC</h3>
+<p class="body" style="font-size:22px;">Dimensión, TCO vs PBI/Fabric, accesos TI/SSO, contratos, agentes y PoC de 5 medidas.</p>
+<p class="gate on">◆ TCO + accesos + PoC OK</p>
+</div>
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 1 · Meses 2–3</p>
+<h3>Datos + BI en paralelo</h3>
+<p class="body" style="font-size:22px;">DWH→Oro (Carril 1) y Cube + Superset con fixtures (Carril 2); conciliación real.</p>
+<p class="gate on">◆ 100% conciliado + firma negocio</p>
+</div>
+<div class="card hl" style="padding:26px;">
+<p class="tagline">Fase 2 · Meses 4–5</p>
+<h3>MVP autoservicio</h3>
+<p class="body" style="font-size:22px;">Integración prod, carga/estrés, auditoría RLS, 3 plantillas y piloto con champions.</p>
+<p class="gate" style="color:#F0A06B;">◆ ≥70% champions · p95 &lt;5s</p>
+</div>
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 3 · Meses 6–9</p>
+<h3>Escalar dominios</h3>
+<p class="body" style="font-size:22px;">Inventario, Promociones, alertas, IA en lenguaje natural y decisión Opción A.</p>
+<p class="gate on">◆ Adopción ≥75% → eval. A</p>
+</div>
+</div>
+<p class="small muted">El reloj del MVP (Meses 2–5) corre tras cerrar accesos DWH, infraestructura y firma de medidas en Fase 0. Si el piloto no cumple la meta en Mes 5, los datos y medidas certificadas siguen siendo 100% reutilizables.</p>
 <div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>13</span></div>
-</section></div><div class="slide-wrap" data-slide="roadmap"><section id="roadmap">
-<div class="head"><p class="kicker">Roadmap · Opción B</p><h2>MVP en producción en el mes 5</h2></div>
-<div class="cards" style="gap:24px;">
-<div class="card" style="padding:32px;"><p class="tagline">Fase 0 · Mes 1</p><h3>Fundaciones</h3><p class="body small">Infra, lago, SSO y CI/CD; agentes configurados</p><p class="gate">◆ Ambiente listo</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 1 · Meses 2–3</p><h3>Datos y medidas</h3><p class="body small">DWH + 1 sistema; 20–30 medidas conciliadas</p><p class="gate">◆ Medidas cuadran</p></div>
-<div class="card hl" style="padding:32px;"><p class="tagline">Fase 2 · Meses 4–5</p><h3>MVP autoservicio</h3><p class="body small">Superset + Cube, 3 plantillas, piloto con champions</p><p class="gate on" style="color:#F0A06B;">◆ Piloto aprobado</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 3 · Meses 6–9</p><h3>Escalar</h3><p class="body small">Más dominios, alertas, piloto de IA; decisión sobre A</p><p class="gate">◆ Adopción ≥ meta</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 4 · Mes 10+</p><h3>Evolución</h3><p class="body small">Front propio (A) y modelos predictivos</p></div>
-</div>
-<p class="small muted">Cada fase termina en una puerta (◆) con un criterio verificable. Ningún tablero se abre a usuarios hasta que las medidas cuadren con el DWH.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
-</section></div><div class="slide-wrap" data-slide="agentes"><section id="agentes" class="alt">
-<div class="head"><p class="kicker">Ejecución</p><h2>Agentes Antigravity, revisados por humanos</h2></div>
-<table style="font-size:22px;">
-<tr><th style="width:430px; padding:10px 18px;">Agente</th><th style="padding:10px 18px;">Qué produce</th><th style="width:410px; padding:10px 18px;">Aprueba</th></tr>
-<tr><td class="strong" style="padding:11px 18px;">Plataforma</td><td style="padding:11px 18px;">Infraestructura como código, CI/CD, monitoreo</td><td style="padding:11px 18px;">Líder técnico</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Ingesta</td><td style="padding:11px 18px;">Conectores al DWH y sistemas, capa bronce</td><td style="padding:11px 18px;">Ingeniero de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Modelado</td><td style="padding:11px 18px;">Modelos dbt plata y oro, reglas de negocio</td><td style="padding:11px 18px;">Equipo de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Semántico</td><td style="padding:11px 18px;">Medidas en YAML de Cube, seguridad por fila (RLS)</td><td style="padding:11px 18px;">Datos + negocio</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Calidad y Conciliación (QA)</td><td style="padding:11px 18px;">Pruebas de calidad de datos y conciliación 100% contra DWH</td><td style="padding:11px 18px;">Equipo de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Seguridad / Ciberseguridad</td><td style="padding:11px 18px;">Auditoría de accesos, SSO/RLS, secretos y vulnerabilidades</td><td style="padding:11px 18px;">Líder técnico + TI / Seguridad</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Experiencia</td><td style="padding:11px 18px;">Superset: tema y plantillas (A: código del front)</td><td style="padding:11px 18px;">Líder técnico + UX</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Documentación</td><td style="padding:11px 18px;">Catálogo de medidas y guías de usuario</td><td style="padding:11px 18px;">Dueño de negocio</td></tr>
-</table>
-<p class="small muted">Cada agente trabaja en una rama de git; nada se integra sin revisión humana y pruebas en CI.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>15</span></div>
-<aside>Incluimos agentes dedicados a Calidad/Conciliación y a Seguridad/Ciberseguridad (auditoría de accesos, SSO, RLS, manejo de secretos y escaneo de vulnerabilidades), siempre validados por humanos.</aside>
-</section></div><div class="slide-wrap" data-slide="modulos"><section id="modulos">
-<div class="head"><p class="kicker">Cómo se organiza</p><h2>Un monorepo: 5 módulos y contratos compartidos</h2></div>
-<div class="stack">
-<div class="row key"><h3>0 · Contratos (contracts/)</h3><p class="body">Esquemas de tablas Oro, catálogo de medidas, reglas RLS y datos sintéticos — se acuerdan primero</p></div>
-<div class="row"><h3>1 · Infraestructura</h3><p class="body">Docker Compose, MinIO/S3, Iceberg, Trino, Keycloak y pipelines de CI/CD</p></div>
-<div class="row"><h3>2 · Ingesta (Bronce)</h3><p class="body">Conectores Airbyte/dlt/CDC y orquestación Dagster desde DWH y sistemas fuente</p></div>
-<div class="row"><h3>3 · Transformación (dbt)</h3><p class="body">Modelos medallón Bronce → Plata → Oro y pruebas automáticas de calidad</p></div>
-<div class="row"><h3>4 · Semántica y BI</h3><p class="body">Cube Core (medidas YAML + RLS) y Apache Superset (tema, roles y plantillas)</p></div>
-</div>
-<p class="small muted">Cada módulo tiene su propio AGENTS.md: un agente puede leer contracts/, pero solo edita su módulo.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>16</span></div>
-<aside>Antes de construir, congelamos los contratos en contracts/. Así el equipo de datos y el de BI avanzan sin adivinar nombres ni esperar al otro.</aside>
-</section></div><div class="slide-wrap" data-slide="colaboracion"><section id="colaboracion" class="dark">
-<div class="head"><p class="kicker">Equipo de 3 + agentes</p><h2>Roles claros y dos carriles en paralelo</h2></div>
+<aside>Cada fase tiene una puerta medible (Stage-Gate). Si en la Semana 4 o el Mes 5 los números no cierran, existe una salida controlada conservando todo el activo de datos y medidas.</aside>
+</section></div><div class="slide-wrap" data-slide="colaboracion"><section id="colaboracion" class="dark compact">
+<div class="head"><p class="kicker">Equipo núcleo de 3 + apoyo TI + agentes</p><h2>Roles claros y continuidad operativa</h2></div>
 <div class="cards">
 <div class="card" style="border-top:6px solid #E2702A;">
 <p class="tagline">Dirección · Jefe (Product Owner)</p>
 <h3>Gobierno y aprobación</h3>
-<p class="body">Prioriza alcance y medidas con negocio, desbloquea accesos e infraestructura, y aprueba cada hito (Go/No-Go) al cierre del sprint.</p>
+<p class="body">Prioriza alcance y medidas con negocio, gestiona accesos/TI y aprueba cada puerta Go/No-Go al cierre de sprint.</p>
 </div>
 <div class="card">
-<p class="tagline">Carril 1 · Rafael / Osmerlys + agentes</p>
+<p class="tagline">Carril 1 · Rafael / Osmerlys + IA</p>
 <h3>Datos (Módulos 2 y 3)</h3>
-<p class="body">Opera sus agentes de ingesta y modelado dbt hasta capa Oro. Valida sus tablas contra el esquema firmado en <strong>contracts/</strong>.</p>
+<p class="body">Dirige agentes de ingesta y modelado dbt (Bronce→Oro). Valida tablas contra el esquema en <code>contracts/</code>.</p>
 </div>
 <div class="card">
-<p class="tagline">Carril 2 · Osmerlys / Rafael + agentes</p>
-<h3>Semántica y BI (Módulos 4 y 5)</h3>
-<p class="body">Opera sus agentes de Cube, RLS y Superset usando <strong>datos sintéticos</strong> en DuckDB, sin esperar a la ingesta real.</p>
+<p class="tagline">Carril 2 · Osmerlys / Rafael + IA</p>
+<h3>Semántica y BI (Módulo 4)</h3>
+<p class="body">Dirige agentes de Cube, RLS y Superset usando datos sintéticos en DuckDB, sin esperar a la ingesta real.</p>
 </div>
 </div>
-<div class="row" style="background:#1E3045; color:#F4F1EA; padding:22px 32px;">
-<h3 style="width:460px; color:#F0A06B;">Agentes creados en conjunto</h3>
-<p class="body" style="color:#C9D1DA;">En Fase 0 definimos juntos las reglas, prompts y fronteras (<strong>AGENTS.md</strong>) de todos los agentes. Luego cada uno dirige su equipo de agentes en su carril y hacemos revisión cruzada humana.</p>
+<div class="row" style="background:#1E3045; color:#F4F1EA; padding:18px 28px;">
+<h3 style="width:450px; color:#F0A06B;">Módulo 1 (Infra) y Privacidad IA</h3>
+<p class="body" style="color:#C9D1DA; font-size:23px;"><strong>TI / DevOps</strong> respalda el Módulo 1 (infra, SSO y firewalls con SLA en Fase 0). Los agentes se crean juntos en Fase 0 y operan <strong>solo sobre esquemas y datos sintéticos</strong>: cero datos reales de negocio salen a LLMs externos.</p>
 </div>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>17</span></div>
-<aside>Somos 3 personas: nuestro jefe gobierna prioridades y aprobaciones; Rafael y yo nos dividimos en dos carriles independientes, cada uno apoyado por agentes creados en conjunto desde Fase 0.</aside>
-</section></div><div class="slide-wrap" data-slide="ejemplo-paralelo"><section id="ejemplo-paralelo">
-<div class="head"><p class="kicker">Ejemplo práctico · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
-
-<div class="row key" style="padding:22px 32px;">
-<h3 style="width:430px;">Día 1 (juntos) · El molde</h3>
-<p class="body">Acordamos en <strong>contracts/</strong> las columnas exactas de <code>oro.fact_ventas</code> (<code>fecha</code>, <code>id_tienda</code>, <code>id_producto</code>, <code>venta_neta</code>, <code>costo_total</code>, <code>unidades</code>) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</p>
-</div>
-
-<div class="cards">
-<div class="card">
-<p class="tagline">En paralelo · Persona A (Datos)</p>
-<h3>Trae y limpia los datos reales</h3>
-<p class="body">Conecta DWH y ERP, limpia en dbt (Bronce → Plata → Oro) y entrega la tabla real <code>oro.fact_ventas</code> cumpliendo <strong>exactamente las mismas 6 columnas</strong> del contrato.</p>
-</div>
-<div class="card">
-<p class="tagline">En paralelo · Persona B (Semántica + BI)</p>
-<h3>Construye medidas y tableros</h3>
-<p class="body">Una fórmula solo necesita los nombres de columna: escribe <strong>Venta Neta</strong>, <strong>Margen %</strong>, permisos por tienda y los 3 tableros en Superset, probando en vivo con las <strong>2.000 filas de prueba</strong>.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
+<aside>Resolvemos dos preguntas clave de TI: el Módulo 1 de infraestructura y SSO cuenta con contraparte de TI/DevOps, y los agentes nunca reciben datos productivos reales de la empresa.</aside>
+</section></div><div class="slide-wrap" data-slide="agentes"><section id="agentes" class="alt compact">
+<div class="head"><p class="kicker">Ejecución asistida por IA</p><h2>8 agentes especializados, siempre aprobados por humanos</h2></div>
+<div class="cols" style="gap:36px;">
+<div class="col" style="gap:14px;">
+<h3><span class="badge dark">Construcción</span> &nbsp;Datos y plataforma</h3>
+<div class="stack" style="gap:10px;">
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Plataforma</h3><p class="body" style="font-size:21px;">IaC, Docker, CI/CD · <strong>Aprueba:</strong> Jefe + TI</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Ingesta</h3><p class="body" style="font-size:21px;">Conectores DWH/ERP a Bronce · <strong>Aprueba:</strong> Carril 1</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Modelado</h3><p class="body" style="font-size:21px;">Modelos dbt Plata/Oro · <strong>Aprueba:</strong> Carril 1</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Semántico</h3><p class="body" style="font-size:21px;">Medidas YAML Cube y RLS · <strong>Aprueba:</strong> Carril 2 + Negocio</p></div>
 </div>
 </div>
-
-<div class="row" style="background:#E2702A; color:#13202E; padding:24px 32px;">
-<h3 style="width:430px; color:#13202E;">Cierre de sprint (cada 1–2 sem)</h3>
-<p class="body" style="color:#13202E;"><strong>1.</strong> Validación automática del molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (de datos de prueba a datos reales, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
-</div>
-
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>18</span></div>
-<aside>Primero acordamos el molde exacto de las tablas y creamos datos de prueba con ese mismo molde. Así uno construye las fórmulas y tableros sin esperar al DWH, mientras el otro trae y limpia los datos reales; al cerrar cada sprint solo cambiamos el enchufe y verificamos que todo cuadre.</aside>
-</section></div><div class="slide-wrap" data-slide="metodologia"><section id="metodologia" class="alt">
-<div class="head"><p class="kicker">Metodología de trabajo</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
-<div class="cards">
-<div class="card hl">
-<p class="tagline">Día 1 · Los 3 (1 hora)</p>
-<h3>1 · Planning y Contratos</h3>
-<p class="body">El jefe fija la meta del sprint. Rafael y tú congelan <strong>contracts/</strong> (tablas, medidas y fixtures) antes de lanzar agentes.</p>
-</div>
-<div class="card">
-<p class="tagline">Días 2–8 · En paralelo</p>
-<h3>2 · Ejecución + Daily 10 min</h3>
-<p class="body">Cada uno trabaja con su equipo de agentes en ramas aisladas. Sincronización diaria de 10 min y revisión cruzada de PRs.</p>
-</div>
-<div class="card">
-<p class="tagline">Día 9 · Rafael y tú (2 h)</p>
-<h3>3 · Integración y QA</h3>
-<p class="body">Cambio de enchufe en Cube (prueba → datos reales) y corrida automática de conciliación contra DWH / Power BI.</p>
-</div>
-<div class="card" style="background:#E2702A; color:#13202E;">
-<p class="tagline" style="color:#13202E;">Día 10 · Los 3 (45 min)</p>
-<h3 style="color:#13202E;">4 · Demo y Go / No-Go</h3>
-<p class="body" style="color:#13202E;">Demo en vivo con datos reales conciliados. El jefe valida valor de negocio y aprueba el paso al siguiente sprint.</p>
+<div class="col" style="gap:14px;">
+<h3><span class="badge">Control y entrega</span> &nbsp;Calidad, seguridad y BI</h3>
+<div class="stack" style="gap:10px;">
+<div class="row key" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Calidad y QA</h3><p class="body" style="font-size:21px;">Calidad dbt y conciliación 100% DWH · <strong>Aprueba:</strong> Carril 1 y 2</p></div>
+<div class="row key" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Ciberseguridad</h3><p class="body" style="font-size:21px;">Auditoría SSO/RLS, secretos y CVEs · <strong>Aprueba:</strong> TI / Seguridad</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Experiencia BI</h3><p class="body" style="font-size:21px;">Superset: tema y 3 plantillas · <strong>Aprueba:</strong> Carril 2 + Jefe</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Documentación</h3><p class="body" style="font-size:21px;">Catálogo de medidas y guías · <strong>Aprueba:</strong> Dueño Negocio</p></div>
 </div>
 </div>
-<p class="small muted">Regla de cierre (Definition of Done): nada se entrega sin pruebas de contrato en verde, conciliación 100% contra DWH y aprobación humana.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>19</span></div>
-<aside>Una metodología simple y sin burocracia: 4 puntos de encuentro claros cada 2 semanas. Los agentes ejecutan rápido en paralelo; los humanos controlan los contratos, la integración y la aprobación final.</aside>
-</section></div><div class="slide-wrap" data-slide="riesgos"><section id="riesgos">
-<div class="head"><p class="kicker">Riesgos</p><h2>El mayor riesgo es la confianza</h2></div>
-<table>
-<tr><th style="width:620px;">Riesgo</th><th>Mitigación</th></tr>
-<tr><td class="strong">Medidas que no cuadran</td><td>Conciliar cada medida contra el DWH antes de certificarla</td></tr>
-<tr><td class="strong">Baja adopción</td><td>Plantillas desde el día 1, champions por área, capacitación corta</td></tr>
-<tr><td class="strong">Calidad en sistemas fuente</td><td>Reglas en capa plata con alertas al dueño del dato</td></tr>
-<tr><td class="strong">Rendimiento con muchos usuarios</td><td>Preagregaciones y caché en Cube; Trino según concurrencia</td></tr>
-<tr><td class="strong">Código de agentes sin control</td><td>Ramas, revisión humana obligatoria y pruebas en CI</td></tr>
+</div>
+<p class="small muted">Ningún agente hace merge a producción: todos trabajan en ramas aisladas con revisión cruzada humana y pruebas automáticas en CI.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>15</span></div>
+<aside>Agrupamos los 8 agentes en Construcción y Control/Entrega, destacando Calidad/Conciliación y Ciberseguridad. Cada aprobador corresponde a un rol real del equipo de 3, TI o Negocio.</aside>
+</section></div><div class="slide-wrap" data-slide="riesgos"><section id="riesgos" class="compact">
+<div class="head"><p class="kicker">Riesgos y mitigación</p><h2>Controlamos negocio, TI, continuidad y privacidad IA</h2></div>
+<table style="font-size:22px;">
+<tr><th style="width:410px;">Riesgo</th><th>Mitigación concreta</th></tr>
+<tr><td class="strong">Medidas no cuadran con reportes</td><td>Conciliación 100% contra DWH/Power BI y pruebas automáticas dbt + Cube antes de certificar</td></tr>
+<tr><td class="strong">Retraso de TI / Seguridad (accesos, SSO)</td><td>SLA acordado con contraparte TI en Fase 0 + avance paralelo con datos sintéticos</td></tr>
+<tr><td class="strong">Dependencia de 2 ejecutores (Bus Factor)</td><td>Todo como código en Git, <code>AGENTS.md</code> documentados, revisión y respaldo cruzado de carriles</td></tr>
+<tr><td class="strong">Privacidad de datos con Agentes IA</td><td>Los agentes operan solo sobre esquemas y datos sintéticos: <strong>cero datos reales a LLMs externos</strong></td></tr>
+<tr><td class="strong">Baja adopción de usuarios</td><td>3 plantillas listas desde el día 1, champions por área y capacitación corta</td></tr>
+<tr><td class="strong">Rendimiento con 100+ concurrentes</td><td>Memoria rápida precalculada en Cube + pruebas de estrés antes de salir a producción</td></tr>
 </table>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>20</span></div>
-</section></div><div class="slide-wrap" data-slide="aprobar"><section id="aprobar" class="accent">
-<div class="head"><p class="kicker">Decisión</p><h2>Lo que pedimos aprobar hoy</h2></div>
-<ol style="font-size:40px; gap:24px;">
-<li>Alcance del MVP: Ventas y Margen de punta a punta</li>
-<li>Arquitectura de referencia de cinco capas</li>
-<li>Opción B para el MVP, con A como evolución</li>
-<li>Arranque de la Fase 0 con agentes Antigravity</li>
+<p class="small muted">Gobierno de medidas: dueño de negocio, definición simple y ciclo borrador → revisión → certificada.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>16</span></div>
+<aside>Cubrimos los 6 riesgos críticos de comité: confianza numérica, tiempos de TI, continuidad con 2 ejecutores, privacidad de datos con IA, adopción y rendimiento.</aside>
+</section></div><div class="slide-wrap" data-slide="aprobar"><section id="aprobar" class="accent compact">
+<div class="head"><p class="kicker">Decisión · Compromiso acotado de 4 semanas</p><h2>Lo que pedimos aprobar hoy</h2></div>
+<ol style="font-size:32px; gap:20px; line-height:1.35;">
+<li><strong>Arrancar Fase 0 (4 semanas, riesgo mínimo):</strong> levantar dimensión real, cerrar TCO a 3 años vs. Power BI/Fabric y entregar PoC con <strong>5 medidas reales conciliadas</strong> en Cube + Superset.</li>
+<li><strong>Designar 1 Dueño de Negocio (Ventas y Margen):</strong> con autoridad para validar y firmar las 20–30 medidas base del MVP.</li>
+<li><strong>Asignar contraparte y SLA de TI / Ciberseguridad:</strong> para definir infraestructura, accesos de lectura al DWH y SSO.</li>
+<li><strong>Fijar Comité Go / No-Go en Semana 4:</strong> aprobar el presupuesto y arranque del MVP (Opción B, 4–5 meses) con TCO cerrado y PoC funcionando.</li>
 </ol>
 <div class="spacer"></div>
-<p class="small">Antes de la Fase 1: confirmar dimensión (usuarios, volumen, fuentes, infraestructura) y taller de medidas con negocio.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>21</span></div>
+<p class="small" style="font-weight:600;">Al final de esta presentación se incluye un Apéndice Técnico (láminas 18–20) con la estructura de módulos, ejemplo paralelo y metodología Scrum del equipo.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>17</span></div>
+<aside>No pedimos hoy firmar un cheque en blanco de 5 meses: pedimos aprobar solo 4 semanas de Fase 0 para cerrar TCO real, accesos de TI y mostrar 5 medidas conciliadas funcionando antes del Go/No-Go formal.</aside>
+</section></div><div class="slide-wrap" data-slide="modulos"><section id="modulos" class="compact">
+<div class="head"><p class="kicker">Apéndice Técnico · 1 / 3 · Estructura del repositorio</p><h2>Un monorepo: contratos compartidos + 4 módulos</h2></div>
+<div class="stack" style="gap:10px;">
+<div class="row key" style="padding:18px 28px;"><h3 style="width:420px;">0 · Contratos (<code>contracts/</code>)</h3><p class="body" style="font-size:23px;">Esquemas Oro, catálogo de medidas, reglas RLS y datos sintéticos — se aprueban primero entre ambos carriles</p></div>
+<div class="row" style="padding:18px 28px;"><h3 style="width:420px;">1 · Infraestructura (TI + IA)</h3><p class="body" style="font-size:23px;">Docker Compose, MinIO/S3, Iceberg, Trino, Keycloak y pipelines de CI/CD</p></div>
+<div class="row" style="padding:18px 28px;"><h3 style="width:420px;">2 · Ingesta — Carril 1</h3><p class="body" style="font-size:23px;">Conectores Airbyte/dlt/CDC y orquestación Dagster desde DWH y sistemas fuente hacia Bronce</p></div>
+<div class="row" style="padding:18px 28px;"><h3 style="width:420px;">3 · Transformación dbt — Carril 1</h3><p class="body" style="font-size:23px;">Modelos medallón Bronce → Plata → Oro y pruebas automáticas de calidad</p></div>
+<div class="row" style="padding:18px 28px;"><h3 style="width:420px;">4 · Semántica y BI — Carril 2</h3><p class="body" style="font-size:23px;">Cube Core (medidas YAML + RLS) y Apache Superset (tema, roles y 3 plantillas)</p></div>
+</div>
+<p class="small muted">Cada módulo tiene su propio <code>AGENTS.md</code>: un agente puede leer <code>contracts/</code>, pero solo edita archivos dentro de su módulo.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>18</span></div>
+<aside>Apéndice técnico para TI y el equipo de ejecución: esta división elimina conflictos de código entre agentes y garantiza trazabilidad completa.</aside>
+</section></div><div class="slide-wrap" data-slide="ejemplo-paralelo"><section id="ejemplo-paralelo" class="alt compact">
+<div class="head"><p class="kicker">Apéndice Técnico · 2 / 3 · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
+
+<div class="row key" style="padding:18px 28px;">
+<h3 style="width:390px;">Día 1 (juntos) · El molde</h3>
+<p class="body" style="font-size:23px;">Acordamos en <code>contracts/</code> las 6 columnas clave de <code>oro.fact_ventas</code> (fecha, tienda, producto, venta, costo, unidades) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</p>
+</div>
+
+<div class="cards">
+<div class="card">
+<p class="tagline">En paralelo · Carril 1 (Datos)</p>
+<h3>Trae y limpia los datos reales</h3>
+<p class="body">Conecta DWH/ERP, limpia en dbt (Bronce → Plata → Oro) y entrega <code>oro.fact_ventas</code> real cumpliendo exactamente las 6 columnas del molde.</p>
+</div>
+<div class="card">
+<p class="tagline">En paralelo · Carril 2 (Semántica + BI)</p>
+<h3>Construye medidas y tableros</h3>
+<p class="body">Una fórmula solo necesita nombres de columna: escribe <strong>Venta Neta</strong>, <strong>Margen %</strong>, RLS y los 3 tableros en Superset probando con las <strong>2.000 filas de prueba</strong>.</p>
+</div>
+</div>
+
+<div class="row accent" style="padding:20px 28px;">
+<h3 style="width:390px;">Integración (Días 8–9)</h3>
+<p class="body" style="font-size:23px;"><strong>1.</strong> CI valida el molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (prueba → Trino real, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
+</div>
+
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>19</span></div>
+<aside>Primero acordamos el molde exacto y datos de prueba. Así ambos carriles avanzan al 100% en paralelo; en los Días 8–9 cambiamos el enchufe de datos de prueba a reales y conciliamos contra el DWH.</aside>
+</section></div><div class="slide-wrap" data-slide="metodologia"><section id="metodologia" class="compact">
+<div class="head"><p class="kicker">Apéndice Técnico · 3 / 3 · Metodología operativa</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
+<div class="grid-2x2">
+<div class="card hl">
+<p class="tagline">Día 1 · Los 3 (1 h + pre-refinement 30 m)</p>
+<h3>1 · Planning y Contratos</h3>
+<p class="body">El Jefe fija la meta del sprint. Carril 1 y Carril 2 congelan <code>contracts/</code> y fixtures antes de lanzar agentes (<em>scope freeze</em> durante el sprint).</p>
+</div>
+<div class="card">
+<p class="tagline">Días 2–7 · En paralelo</p>
+<h3>2 · Ejecución + Daily 10 min</h3>
+<p class="body">Cada carril opera sus agentes en ramas aisladas (y worktrees). Revisión cruzada diaria de PRs y 20% de capacidad reservada para deuda técnica y auditoría.</p>
+</div>
+<div class="card">
+<p class="tagline">Días 8–9 · Carril 1 y Carril 2</p>
+<h3>3 · Integración real y QA</h3>
+<p class="body">Cambio de enchufe en staging (prueba → Trino real), pruebas de rendimiento, RLS y conciliación 100% contra DWH / Power BI.</p>
+</div>
+<div class="card accent">
+<p class="tagline">Día 10 · Los 3 (45 min)</p>
+<h3>4 · Demo y Go / No-Go</h3>
+<p class="body">Demo en vivo con datos reales conciliados. El Jefe valida valor de negocio y aprueba el paso al siguiente sprint (con respaldo cruzado ante ausencias).</p>
+</div>
+</div>
+<p class="small muted">Definition of Done: pruebas de contrato en verde, conciliación 100% contra DWH, RLS validado, revisión humana y catálogo documentado.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>20</span></div>
+<aside>Scrum ligero sin burocracia con 4 puntos claros de encuentro cada 2 semanas, scope freeze, 20% para auditoría de código generado por agentes y 2 días dedicados a integración real y conciliación.</aside>
 </section></div>
 </div>
 <div id="notes-bar"></div>
 <div class="toolbar">
   <button onclick="prev()">&#8592; Anterior</button>
-  <span id="counter">1 / 21</span>
+  <span id="counter">1 / 20</span>
   <button onclick="next()">Siguiente &#8594;</button>
   <button class="sec" onclick="toggleNotes()" title="Tecla N">Notas</button>
   <button class="sec" onclick="toggleFullscreen()" title="Tecla F">Pantalla completa</button>

@@ -1,26 +1,26 @@
-<section id="colaboracion" class="dark">
-<div class="head"><p class="kicker">Equipo de 3 + agentes</p><h2>Roles claros y dos carriles en paralelo</h2></div>
+<section id="colaboracion" class="dark compact">
+<div class="head"><p class="kicker">Equipo núcleo de 3 + apoyo TI + agentes</p><h2>Roles claros y continuidad operativa</h2></div>
 <div class="cards">
 <div class="card" style="border-top:6px solid #E2702A;">
 <p class="tagline">Dirección · Jefe (Product Owner)</p>
 <h3>Gobierno y aprobación</h3>
-<p class="body">Prioriza alcance y medidas con negocio, desbloquea accesos e infraestructura, y aprueba cada hito (Go/No-Go) al cierre del sprint.</p>
+<p class="body">Prioriza alcance y medidas con negocio, gestiona accesos/TI y aprueba cada puerta Go/No-Go al cierre de sprint.</p>
 </div>
 <div class="card">
-<p class="tagline">Carril 1 · Rafael / Osmerlys + agentes</p>
+<p class="tagline">Carril 1 · Rafael / Osmerlys + IA</p>
 <h3>Datos (Módulos 2 y 3)</h3>
-<p class="body">Opera sus agentes de ingesta y modelado dbt hasta capa Oro. Valida sus tablas contra el esquema firmado en <strong>contracts/</strong>.</p>
+<p class="body">Dirige agentes de ingesta y modelado dbt (Bronce→Oro). Valida tablas contra el esquema en <code>contracts/</code>.</p>
 </div>
 <div class="card">
-<p class="tagline">Carril 2 · Osmerlys / Rafael + agentes</p>
-<h3>Semántica y BI (Módulos 4 y 5)</h3>
-<p class="body">Opera sus agentes de Cube, RLS y Superset usando <strong>datos sintéticos</strong> en DuckDB, sin esperar a la ingesta real.</p>
+<p class="tagline">Carril 2 · Osmerlys / Rafael + IA</p>
+<h3>Semántica y BI (Módulo 4)</h3>
+<p class="body">Dirige agentes de Cube, RLS y Superset usando datos sintéticos en DuckDB, sin esperar a la ingesta real.</p>
 </div>
 </div>
-<div class="row" style="background:#1E3045; color:#F4F1EA; padding:22px 32px;">
-<h3 style="width:460px; color:#F0A06B;">Agentes creados en conjunto</h3>
-<p class="body" style="color:#C9D1DA;">En Fase 0 definimos juntos las reglas, prompts y fronteras (<strong>AGENTS.md</strong>) de todos los agentes. Luego cada uno dirige su equipo de agentes en su carril y hacemos revisión cruzada humana.</p>
+<div class="row" style="background:#1E3045; color:#F4F1EA; padding:18px 28px;">
+<h3 style="width:450px; color:#F0A06B;">Módulo 1 (Infra) y Privacidad IA</h3>
+<p class="body" style="color:#C9D1DA; font-size:23px;"><strong>TI / DevOps</strong> respalda el Módulo 1 (infra, SSO y firewalls con SLA en Fase 0). Los agentes se crean juntos en Fase 0 y operan <strong>solo sobre esquemas y datos sintéticos</strong>: cero datos reales de negocio salen a LLMs externos.</p>
 </div>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>16</span></div>
-<aside>Somos 3 personas: nuestro jefe gobierna prioridades y aprobaciones; Rafael y yo nos dividimos en dos carriles independientes, cada uno apoyado por agentes creados en conjunto desde Fase 0.</aside>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
+<aside>Resolvemos dos preguntas clave de TI: el Módulo 1 de infraestructura y SSO cuenta con contraparte de TI/DevOps, y los agentes nunca reciben datos productivos reales de la empresa.</aside>
 </section>

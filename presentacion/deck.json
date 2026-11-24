@@ -21,20 +21,19 @@
     "patron",
     "usuarios",
     "alcance",
-    "arquitectura",
     "diagrama-arquitectura",
     "opciones",
     "superset-vista",
     "comparativa",
     "recomendacion",
     "roadmap",
-    "agentes",
-    "modulos",
     "colaboracion",
-    "ejemplo-paralelo",
-    "metodologia",
+    "agentes",
     "riesgos",
-    "aprobar"
+    "aprobar",
+    "modulos",
+    "ejemplo-paralelo",
+    "metodologia"
   ],
   "sections": {
     "s1": {

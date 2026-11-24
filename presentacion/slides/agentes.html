@@ -1,17 +1,26 @@
-<section id="agentes" class="alt">
-<div class="head"><p class="kicker">Ejecución</p><h2>Agentes Antigravity, revisados por humanos</h2></div>
-<table style="font-size:22px;">
-<tr><th style="width:430px; padding:10px 18px;">Agente</th><th style="padding:10px 18px;">Qué produce</th><th style="width:410px; padding:10px 18px;">Aprueba</th></tr>
-<tr><td class="strong" style="padding:11px 18px;">Plataforma</td><td style="padding:11px 18px;">Infraestructura como código, CI/CD, monitoreo</td><td style="padding:11px 18px;">Líder técnico</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Ingesta</td><td style="padding:11px 18px;">Conectores al DWH y sistemas, capa bronce</td><td style="padding:11px 18px;">Ingeniero de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Modelado</td><td style="padding:11px 18px;">Modelos dbt plata y oro, reglas de negocio</td><td style="padding:11px 18px;">Equipo de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Semántico</td><td style="padding:11px 18px;">Medidas en YAML de Cube, seguridad por fila (RLS)</td><td style="padding:11px 18px;">Datos + negocio</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Calidad y Conciliación (QA)</td><td style="padding:11px 18px;">Pruebas de calidad de datos y conciliación 100% contra DWH</td><td style="padding:11px 18px;">Equipo de datos</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Seguridad / Ciberseguridad</td><td style="padding:11px 18px;">Auditoría de accesos, SSO/RLS, secretos y vulnerabilidades</td><td style="padding:11px 18px;">Líder técnico + TI / Seguridad</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Experiencia</td><td style="padding:11px 18px;">Superset: tema y plantillas (A: código del front)</td><td style="padding:11px 18px;">Líder técnico + UX</td></tr>
-<tr><td class="strong" style="padding:11px 18px;">Documentación</td><td style="padding:11px 18px;">Catálogo de medidas y guías de usuario</td><td style="padding:11px 18px;">Dueño de negocio</td></tr>
-</table>
-<p class="small muted">Cada agente trabaja en una rama de git; nada se integra sin revisión humana y pruebas en CI.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>14</span></div>
-<aside>Incluimos agentes dedicados a Calidad/Conciliación y a Seguridad/Ciberseguridad (auditoría de accesos, SSO, RLS, manejo de secretos y escaneo de vulnerabilidades), siempre validados por humanos.</aside>
+<section id="agentes" class="alt compact">
+<div class="head"><p class="kicker">Ejecución asistida por IA</p><h2>8 agentes especializados, siempre aprobados por humanos</h2></div>
+<div class="cols" style="gap:36px;">
+<div class="col" style="gap:14px;">
+<h3><span class="badge dark">Construcción</span> &nbsp;Datos y plataforma</h3>
+<div class="stack" style="gap:10px;">
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Plataforma</h3><p class="body" style="font-size:21px;">IaC, Docker, CI/CD · <strong>Aprueba:</strong> Jefe + TI</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Ingesta</h3><p class="body" style="font-size:21px;">Conectores DWH/ERP a Bronce · <strong>Aprueba:</strong> Carril 1</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Modelado</h3><p class="body" style="font-size:21px;">Modelos dbt Plata/Oro · <strong>Aprueba:</strong> Carril 1</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:220px; font-size:24px;">Semántico</h3><p class="body" style="font-size:21px;">Medidas YAML Cube y RLS · <strong>Aprueba:</strong> Carril 2 + Negocio</p></div>
+</div>
+</div>
+<div class="col" style="gap:14px;">
+<h3><span class="badge">Control y entrega</span> &nbsp;Calidad, seguridad y BI</h3>
+<div class="stack" style="gap:10px;">
+<div class="row key" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Calidad y QA</h3><p class="body" style="font-size:21px;">Calidad dbt y conciliación 100% DWH · <strong>Aprueba:</strong> Carril 1 y 2</p></div>
+<div class="row key" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Ciberseguridad</h3><p class="body" style="font-size:21px;">Auditoría SSO/RLS, secretos y CVEs · <strong>Aprueba:</strong> TI / Seguridad</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Experiencia BI</h3><p class="body" style="font-size:21px;">Superset: tema y 3 plantillas · <strong>Aprueba:</strong> Carril 2 + Jefe</p></div>
+<div class="row" style="padding:16px 22px; gap:20px;"><h3 style="width:240px; font-size:24px;">Documentación</h3><p class="body" style="font-size:21px;">Catálogo de medidas y guías · <strong>Aprueba:</strong> Dueño Negocio</p></div>
+</div>
+</div>
+</div>
+<p class="small muted">Ningún agente hace merge a producción: todos trabajan en ramas aisladas con revisión cruzada humana y pruebas automáticas en CI.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>15</span></div>
+<aside>Agrupamos los 8 agentes en Construcción y Control/Entrega, destacando Calidad/Conciliación y Ciberseguridad. Cada aprobador corresponde a un rol real del equipo de 3, TI o Negocio.</aside>
 </section>

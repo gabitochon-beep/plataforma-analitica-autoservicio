@@ -1,12 +1,15 @@
-<section id="riesgos">
-<div class="head"><p class="kicker">Riesgos</p><h2>El mayor riesgo es la confianza</h2></div>
-<table>
-<tr><th style="width:620px;">Riesgo</th><th>Mitigación</th></tr>
-<tr><td class="strong">Medidas que no cuadran</td><td>Conciliar cada medida contra el DWH antes de certificarla</td></tr>
-<tr><td class="strong">Baja adopción</td><td>Plantillas desde el día 1, champions por área, capacitación corta</td></tr>
-<tr><td class="strong">Calidad en sistemas fuente</td><td>Reglas en capa plata con alertas al dueño del dato</td></tr>
-<tr><td class="strong">Rendimiento con muchos usuarios</td><td>Preagregaciones y caché en Cube; Trino según concurrencia</td></tr>
-<tr><td class="strong">Código de agentes sin control</td><td>Ramas, revisión humana obligatoria y pruebas en CI</td></tr>
+<section id="riesgos" class="compact">
+<div class="head"><p class="kicker">Riesgos y mitigación</p><h2>Controlamos negocio, TI, continuidad y privacidad IA</h2></div>
+<table style="font-size:22px;">
+<tr><th style="width:410px;">Riesgo</th><th>Mitigación concreta</th></tr>
+<tr><td class="strong">Medidas no cuadran con reportes</td><td>Conciliación 100% contra DWH/Power BI y pruebas automáticas dbt + Cube antes de certificar</td></tr>
+<tr><td class="strong">Retraso de TI / Seguridad (accesos, SSO)</td><td>SLA acordado con contraparte TI en Fase 0 + avance paralelo con datos sintéticos</td></tr>
+<tr><td class="strong">Dependencia de 2 ejecutores (Bus Factor)</td><td>Todo como código en Git, <code>AGENTS.md</code> documentados, revisión y respaldo cruzado de carriles</td></tr>
+<tr><td class="strong">Privacidad de datos con Agentes IA</td><td>Los agentes operan solo sobre esquemas y datos sintéticos: <strong>cero datos reales a LLMs externos</strong></td></tr>
+<tr><td class="strong">Baja adopción de usuarios</td><td>3 plantillas listas desde el día 1, champions por área y capacitación corta</td></tr>
+<tr><td class="strong">Rendimiento con 100+ concurrentes</td><td>Memoria rápida precalculada en Cube + pruebas de estrés antes de salir a producción</td></tr>
 </table>
+<p class="small muted">Gobierno de medidas: dueño de negocio, definición simple y ciclo borrador → revisión → certificada.</p>
 <div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>16</span></div>
+<aside>Cubrimos los 6 riesgos críticos de comité: confianza numérica, tiempos de TI, continuidad con 2 ejecutores, privacidad de datos con IA, adopción y rendimiento.</aside>
 </section>

@@ -1,12 +1,32 @@
-<section id="roadmap">
-<div class="head"><p class="kicker">Roadmap · Opción B</p><h2>MVP en producción en el mes 5</h2></div>
-<div class="cards" style="gap:24px;">
-<div class="card" style="padding:32px;"><p class="tagline">Fase 0 · Mes 1</p><h3>Fundaciones</h3><p class="body small">Infra, lago, SSO y CI/CD; agentes configurados</p><p class="gate">◆ Ambiente listo</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 1 · Meses 2–3</p><h3>Datos y medidas</h3><p class="body small">DWH + 1 sistema; 20–30 medidas conciliadas</p><p class="gate">◆ Medidas cuadran</p></div>
-<div class="card hl" style="padding:32px;"><p class="tagline">Fase 2 · Meses 4–5</p><h3>MVP autoservicio</h3><p class="body small">Superset + Cube, 3 plantillas, piloto con champions</p><p class="gate on" style="color:#F0A06B;">◆ Piloto aprobado</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 3 · Meses 6–9</p><h3>Escalar</h3><p class="body small">Más dominios, alertas, piloto de IA; decisión sobre A</p><p class="gate">◆ Adopción ≥ meta</p></div>
-<div class="card" style="padding:32px;"><p class="tagline">Fase 4 · Mes 10+</p><h3>Evolución</h3><p class="body small">Front propio (A) y modelos predictivos</p></div>
+<section id="roadmap" class="compact">
+<div class="head"><p class="kicker">Plan de fases · Puertas de aprobación (Stage-Gates)</p><h2>De fundaciones a escala con criterios medibles</h2></div>
+<div class="cards" style="gap:20px;">
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 0 · 4 sem</p>
+<h3>Fundaciones y PoC</h3>
+<p class="body" style="font-size:22px;">Dimensión, TCO vs PBI/Fabric, accesos TI/SSO, contratos, agentes y PoC de 5 medidas.</p>
+<p class="gate on">◆ TCO + accesos + PoC OK</p>
 </div>
-<p class="small muted">Cada fase termina en una puerta (◆) con un criterio verificable. Ningún tablero se abre a usuarios hasta que las medidas cuadren con el DWH.</p>
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>12</span></div>
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 1 · Meses 2–3</p>
+<h3>Datos + BI en paralelo</h3>
+<p class="body" style="font-size:22px;">DWH→Oro (Carril 1) y Cube + Superset con fixtures (Carril 2); conciliación real.</p>
+<p class="gate on">◆ 100% conciliado + firma negocio</p>
+</div>
+<div class="card hl" style="padding:26px;">
+<p class="tagline">Fase 2 · Meses 4–5</p>
+<h3>MVP autoservicio</h3>
+<p class="body" style="font-size:22px;">Integración prod, carga/estrés, auditoría RLS, 3 plantillas y piloto con champions.</p>
+<p class="gate" style="color:#F0A06B;">◆ ≥70% champions · p95 &lt;5s</p>
+</div>
+<div class="card" style="padding:26px;">
+<p class="tagline">Fase 3 · Meses 6–9</p>
+<h3>Escalar dominios</h3>
+<p class="body" style="font-size:22px;">Inventario, Promociones, alertas, IA en lenguaje natural y decisión Opción A.</p>
+<p class="gate on">◆ Adopción ≥75% → eval. A</p>
+</div>
+</div>
+<p class="small muted">El reloj del MVP (Meses 2–5) corre tras cerrar accesos DWH, infraestructura y firma de medidas en Fase 0. Si el piloto no cumple la meta en Mes 5, los datos y medidas certificadas siguen siendo 100% reutilizables.</p>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>13</span></div>
+<aside>Cada fase tiene una puerta medible (Stage-Gate). Si en la Semana 4 o el Mes 5 los números no cierran, existe una salida controlada conservando todo el activo de datos y medidas.</aside>
 </section>

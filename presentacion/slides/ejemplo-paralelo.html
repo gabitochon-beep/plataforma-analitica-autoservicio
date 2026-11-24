@@ -1,29 +1,29 @@
-<section id="ejemplo-paralelo">
-<div class="head"><p class="kicker">Ejemplo práctico · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
+<section id="ejemplo-paralelo" class="alt compact">
+<div class="head"><p class="kicker">Apéndice Técnico · 2 / 3 · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
 
-<div class="row key" style="padding:22px 32px;">
-<h3 style="width:430px;">Día 1 (juntos) · El molde</h3>
-<p class="body">Acordamos en <strong>contracts/</strong> las columnas exactas de <code>oro.fact_ventas</code> (<code>fecha</code>, <code>id_tienda</code>, <code>id_producto</code>, <code>venta_neta</code>, <code>costo_total</code>, <code>unidades</code>) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</p>
+<div class="row key" style="padding:18px 28px;">
+<h3 style="width:390px;">Día 1 (juntos) · El molde</h3>
+<p class="body" style="font-size:23px;">Acordamos en <code>contracts/</code> las 6 columnas clave de <code>oro.fact_ventas</code> (fecha, tienda, producto, venta, costo, unidades) y generamos <strong>2.000 filas de prueba</strong> en DuckDB.</p>
 </div>
 
 <div class="cards">
 <div class="card">
-<p class="tagline">En paralelo · Persona A (Datos)</p>
+<p class="tagline">En paralelo · Carril 1 (Datos)</p>
 <h3>Trae y limpia los datos reales</h3>
-<p class="body">Conecta DWH y ERP, limpia en dbt (Bronce → Plata → Oro) y entrega la tabla real <code>oro.fact_ventas</code> cumpliendo <strong>exactamente las mismas 6 columnas</strong> del contrato.</p>
+<p class="body">Conecta DWH/ERP, limpia en dbt (Bronce → Plata → Oro) y entrega <code>oro.fact_ventas</code> real cumpliendo exactamente las 6 columnas del molde.</p>
 </div>
 <div class="card">
-<p class="tagline">En paralelo · Persona B (Semántica + BI)</p>
+<p class="tagline">En paralelo · Carril 2 (Semántica + BI)</p>
 <h3>Construye medidas y tableros</h3>
-<p class="body">Una fórmula solo necesita los nombres de columna: escribe <strong>Venta Neta</strong>, <strong>Margen %</strong>, permisos por tienda y los 3 tableros en Superset, probando en vivo con las <strong>2.000 filas de prueba</strong>.</p>
+<p class="body">Una fórmula solo necesita nombres de columna: escribe <strong>Venta Neta</strong>, <strong>Margen %</strong>, RLS y los 3 tableros en Superset probando con las <strong>2.000 filas de prueba</strong>.</p>
 </div>
 </div>
 
-<div class="row" style="background:#E2702A; color:#13202E; padding:24px 32px;">
-<h3 style="width:430px; color:#13202E;">Cierre de sprint (cada 1–2 sem)</h3>
-<p class="body" style="color:#13202E;"><strong>1.</strong> Validación automática del molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (de datos de prueba a datos reales, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
+<div class="row accent" style="padding:20px 28px;">
+<h3 style="width:390px;">Integración (Días 8–9)</h3>
+<p class="body" style="font-size:23px;"><strong>1.</strong> CI valida el molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (prueba → Trino real, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
 </div>
 
-<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>17</span></div>
-<aside>Primero acordamos el molde exacto de las tablas y creamos datos de prueba con ese mismo molde. Así uno construye las fórmulas y tableros sin esperar al DWH, mientras el otro trae y limpia los datos reales; al cerrar cada sprint solo cambiamos el enchufe y verificamos que todo cuadre.</aside>
+<div class="footer"><span>Osmerlys Tochon · En la incomodidad hay crecimiento</span><span>19</span></div>
+<aside>Primero acordamos el molde exacto y datos de prueba. Así ambos carriles avanzan al 100% en paralelo; en los Días 8–9 cambiamos el enchufe de datos de prueba a reales y conciliamos contra el DWH.</aside>
 </section>
