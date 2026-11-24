@@ -168,7 +168,7 @@ td.strong { font-weight:600; }
 <p class="kicker">Propuesta para aprobación · Noviembre 2026</p>
 <h1>Plataforma de Analítica Autoservicio</h1>
 <p class="lead muted">Dimensión, alcance y arquitectura. El negocio arma sus propios tableros; detrás, una base robusta de datos y medidas certificadas.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>1</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>1</span></div>
 <aside>Objetivo de la sesión: aprobar el alcance del MVP, la arquitectura y la opción recomendada para arrancar la Fase 0.</aside>
 </section></div><div class="slide-wrap" data-slide="problema"><section id="problema">
 <div class="head"><p class="kicker">El problema · Hoy con Power BI Server</p><h2>Cada reporte redefine sus métricas</h2></div>
@@ -177,7 +177,7 @@ td.strong { font-weight:600; }
 <div class="card"><h3>El área de datos es el cuello de botella</h3><p class="body">Los usuarios no pueden armar sus propios tableros: cada cambio o reporte nuevo entra en la cola técnica.</p></div>
 <div class="card"><h3>Excel como destino final</h3><p class="body">Al no tener autoservicio gobernado, el negocio exporta a Excel y rearma a mano, sin versiones ni seguridad.</p></div>
 </div>
-<div class="footer"><span>Propuesta de XXX</span><span>2</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>2</span></div>
 <aside>Partimos de nuestra realidad actual con Power BI Server: no se trata de tirar lo que funciona, sino de resolver el cuello de botella y unificar las medidas.</aside>
 </section></div><div class="slide-wrap" data-slide="propuesta"><section id="propuesta" class="alt">
 <div class="head"><p class="kicker">La propuesta</p><h2>Medidas definidas una vez.<br>Tableros creados por el negocio.</h2></div>
@@ -185,7 +185,7 @@ td.strong { font-weight:600; }
 <div class="layer front"><h3>Lo que ve el usuario</h3><p class="body">Arrastrar y soltar medidas certificadas · catálogo de gráficos · plantillas por área · sin DAX ni SQL</p></div>
 <div class="layer back"><h3>La robustez de atrás</h3><p class="body">Lago de datos desde el DWH y los sistemas · modelado · capa semántica con medidas certificadas · seguridad por fila · memoria rápida (resúmenes precalculados)</p></div>
 </div>
-<div class="footer"><span>Propuesta de XXX</span><span>3</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>3</span></div>
 <aside>La clave es la capa semántica: "Venta neta" significa lo mismo en todos los tableros.</aside>
 </section></div><div class="slide-wrap" data-slide="benchmark"><section id="benchmark">
 <div class="head"><p class="kicker">Benchmark 2026</p><h2>Qué tomamos de cada plataforma</h2></div>
@@ -198,13 +198,13 @@ td.strong { font-weight:600; }
 <tr><td class="strong">Superset / Metabase</td><td>Datasets y modelos open source</td><td>Base visual open source y sin licencias</td></tr>
 <tr><td class="strong">Cube Core / dbt</td><td>Capa semántica independiente del front</td><td>El corazón de nuestra capa semántica</td></tr>
 </table>
-<div class="footer"><span>Propuesta de XXX</span><span>4</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>4</span></div>
 <aside>Fuentes: documentación de Databricks, Microsoft Fabric, Looker, Tableau, Cube y comparativas 2026 citadas en el documento de arquitectura.</aside>
 </section></div><div class="slide-wrap" data-slide="patron"><section id="patron" class="accent statement" style="justify-content:center;">
 <p class="kicker">Conclusión del benchmark</p>
 <h2>Todos los líderes convergen en el mismo patrón: medidas gobernadas una vez y el negocio compone encima.</h2>
 <p class="lead">Por eso la capa semántica es una pieza propia e independiente, y el front se vuelve intercambiable.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>5</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>5</span></div>
 </section></div><div class="slide-wrap" data-slide="usuarios"><section id="usuarios" class="compact">
 <div class="head"><p class="kicker">Dimensión · AS-IS vs TO-BE</p><h2>De cargar con cada tablero a gobernar una sola base</h2></div>
 <div class="row" style="background:#E8E3D8; border-left:8px solid #B5501A; padding:18px 28px;">
@@ -217,7 +217,7 @@ td.strong { font-weight:600; }
 <div class="card hl"><p class="tagline">TO-BE · Garantiza y evoluciona</p><h3>Equipo / Analistas de datos</h3><p class="body">Dejan de mantener cada tablero en cola; se enfocan en datos, certificar medidas, SQL, seguridad y optimización central.</p></div>
 </div>
 <p class="small muted">En Fase 0 confirmamos: usuarios concurrentes, volumen del DWH, sistemas fuente, frecuencia de carga y nube vs. on-premise.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>6</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>6</span></div>
 <aside>AS-IS: hoy el analista de datos y el equipo de datos cargan con crear, mantener y optimizar cada tablero en cola. TO-BE: unificamos su rol en gobernar una sola base y certificar medidas para que las áreas creen sus tableros.</aside>
 </section></div><div class="slide-wrap" data-slide="alcance"><section id="alcance" class="alt compact">
 <div class="head"><p class="kicker">Alcance</p><h2>El MVP: un dominio de punta a punta</h2></div>
@@ -244,7 +244,7 @@ td.strong { font-weight:600; }
 <p class="body" style="font-size:21px; line-height:1.35;">Venta Bruta · Descuentos · Devoluciones · Venta Neta · Costo · Margen $ · Margen % · Unidades · Tickets · Ticket Promedio · Variación YoY/MoM · % Meta · Mix % · SKUs y Tiendas Activas &nbsp;<span style="color:#F0A06B;">(cruzables por Tienda, Región, Categoría, Marca, SKU, Canal y Fecha)</span></p>
 </div>
 <p class="small muted">Fuera de alcance: reemplazar el DWH actual, migrar todos los reportes existentes, usuarios externos.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>7</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>7</span></div>
 <aside>Con 20 a 30 medidas base de Ventas y Margen combinables libremente por cualquier dimensión se cubren cientos de vistas y el 80–90% de las preguntas diarias del negocio.</aside>
 </section></div><div class="slide-wrap" data-slide="diagrama-arquitectura"><section id="diagrama-arquitectura" class="compact">
 <div class="head"><p class="kicker">Arquitectura de 5 capas y flujo de datos</p><h2>De las fuentes al usuario · 100+ concurrentes</h2></div>
@@ -357,7 +357,7 @@ td.strong { font-weight:600; }
 </svg>
 </div>
 
-<div class="footer"><span>Propuesta de XXX</span><span>8</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>8</span></div>
 <aside>Los pisos 1 al 4 son idénticos en cualquier opción; solo cambia el piso 5. Cube atiende en milisegundos a más de 100 usuarios simultáneos desde memoria rápida sin tocar el DWH.</aside>
 </section></div><div class="slide-wrap" data-slide="opciones"><section id="opciones" class="alt compact">
 <div class="head"><p class="kicker">Las dos opciones · Ambos $0 en licencias de BI</p><h2>Dos caminos sobre la misma base</h2></div>
@@ -375,7 +375,7 @@ td.strong { font-weight:600; }
 <p class="num">4–5 meses* · 3 personas + IA</p></div>
 </div>
 <p class="small muted">*4–5 meses (MVP DWH; 5–6 meses si incluye CDC ERP) tras cerrar infra/accesos en Fase 0. Sin agentes equivaldría a 4–5 personas. Costos reales: solo infraestructura y tokens de agentes (se cierran en Fase 0).</p>
-<div class="footer"><span>Propuesta de XXX</span><span>9</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>9</span></div>
 <aside>Aclaramos la ecuación de equipo: sin agentes la Opción B toma 4–5 personas; con nuestro núcleo de 3 + agentes + apoyo puntual de TI para infraestructura logramos ese mismo alcance, con $0 en licencias de BI y solo costo de infraestructura y tokens de IA.</aside>
 </section></div><div class="slide-wrap" data-slide="superset-vista"><section id="superset-vista">
 <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px;">
@@ -389,7 +389,7 @@ td.strong { font-weight:600; }
 <h3 style="width:360px;">Conexión al modelo</h3>
 <p class="body">DWH / Sistemas → Lago Iceberg + dbt (Oro) → Trino → <strong>Cube Core (API SQL tipo PostgreSQL)</strong> → Apache Superset</p>
 </div>
-<div class="footer"><span>Propuesta de XXX</span><span>10</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>10</span></div>
 <aside>Apache Superset es 100% gratuito (Apache 2.0). Se conecta a Cube como si fuera una base de datos PostgreSQL: el usuario arrastra medidas ya certificadas sin escribir SQL ni DAX.</aside>
 </section></div><div class="slide-wrap" data-slide="comparativa"><section id="comparativa" class="alt compact">
 <div class="head"><p class="kicker">Caso de negocio · Buy vs. Build (TCO)</p><h2>Por qué Opción B frente a seguir igual o comprar SaaS</h2></div>
@@ -402,13 +402,13 @@ td.strong { font-weight:600; }
 <tr><td class="strong">Reutilización futura</td><td>Baja</td><td>Difícil migrar fuera</td><td class="strong">100% (base + Cube sirven para A o PBI)</td><td>100%</td></tr>
 </table>
 <p class="small muted">En Fase 0 (Semana 4) entregamos la comparativa financiera cerrada a 3 años (TCO exacto: infraestructura + operación vs. licencias Power BI/Fabric) con la dimensión confirmada.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>11</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>11</span></div>
 <aside>No decimos que la Opción B sea "gratis": tiene costo de infraestructura, operación y tokens de IA, pero elimina licencias recurrentes por usuario y dependencia del proveedor. En Fase 0 cerramos el TCO exacto a 3 años.</aside>
 </section></div><div class="slide-wrap" data-slide="recomendacion"><section id="recomendacion" class="dark" style="justify-content:center;">
 <p class="kicker">Recomendación</p>
 <h1 style="font-size:96px;">Opción B ahora.<br>Opción A como evolución.</h1>
 <p class="lead muted">Validamos adopción y medidas con usuarios reales en 4–5 meses. Pasar al front propio solo cambia la capa visual: datos, medidas y seguridad se reutilizan.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>12</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>12</span></div>
 </section></div><div class="slide-wrap" data-slide="roadmap"><section id="roadmap" class="compact">
 <div class="head"><p class="kicker">Plan de fases · Puertas de aprobación (Stage-Gates)</p><h2>De fundaciones a escala con criterios medibles</h2></div>
 <div class="cards" style="gap:20px;">
@@ -438,7 +438,7 @@ td.strong { font-weight:600; }
 </div>
 </div>
 <p class="small muted">El reloj del MVP (Meses 2–5) corre tras cerrar accesos DWH, infraestructura y firma de medidas en Fase 0. Si el piloto no cumple la meta en Mes 5, los datos y medidas certificadas siguen siendo 100% reutilizables.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>13</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>13</span></div>
 <aside>Cada fase tiene una puerta medible (Stage-Gate). Si en la Semana 4 o el Mes 5 los números no cierran, existe una salida controlada conservando todo el activo de datos y medidas.</aside>
 </section></div><div class="slide-wrap" data-slide="colaboracion"><section id="colaboracion" class="dark compact">
 <div class="head"><p class="kicker">Equipo núcleo de 3 + apoyo TI + agentes</p><h2>Roles claros y continuidad operativa</h2></div>
@@ -463,7 +463,7 @@ td.strong { font-weight:600; }
 <h3 style="width:450px; color:#F0A06B;">Módulo 1 (Infra) y Privacidad IA</h3>
 <p class="body" style="color:#C9D1DA; font-size:23px;"><strong>TI / DevOps</strong> respalda el Módulo 1 (infra, SSO y firewalls con SLA en Fase 0). Los agentes se crean juntos en Fase 0 y operan <strong>solo sobre esquemas y datos sintéticos</strong>: cero datos reales de negocio salen a LLMs externos.</p>
 </div>
-<div class="footer"><span>Propuesta de XXX</span><span>14</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>14</span></div>
 <aside>Resolvemos dos preguntas clave de TI: el Módulo 1 de infraestructura y SSO cuenta con contraparte de TI/DevOps, y los agentes nunca reciben datos productivos reales de la empresa.</aside>
 </section></div><div class="slide-wrap" data-slide="agentes"><section id="agentes" class="alt compact">
 <div class="head"><p class="kicker">Ejecución asistida por IA</p><h2>8 agentes especializados, siempre aprobados por humanos</h2></div>
@@ -488,7 +488,7 @@ td.strong { font-weight:600; }
 </div>
 </div>
 <p class="small muted">Ningún agente hace merge a producción: todos trabajan en ramas aisladas con revisión cruzada humana y pruebas automáticas en CI.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>15</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>15</span></div>
 <aside>Agrupamos los 8 agentes en Construcción y Control/Entrega, destacando Calidad/Conciliación y Ciberseguridad. Cada aprobador corresponde a un rol real del equipo de 3, TI o Negocio.</aside>
 </section></div><div class="slide-wrap" data-slide="riesgos"><section id="riesgos" class="compact">
 <div class="head"><p class="kicker">Riesgos y mitigación</p><h2>Controlamos negocio, TI, continuidad y privacidad IA</h2></div>
@@ -502,7 +502,7 @@ td.strong { font-weight:600; }
 <tr><td class="strong">Rendimiento con 100+ concurrentes</td><td>Memoria rápida precalculada en Cube + pruebas de estrés antes de salir a producción</td></tr>
 </table>
 <p class="small muted">Gobierno de medidas: dueño de negocio, definición simple y ciclo borrador → revisión → certificada.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>16</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>16</span></div>
 <aside>Cubrimos los 6 riesgos críticos de comité: confianza numérica, tiempos de TI, continuidad con 2 ejecutores, privacidad de datos con IA, adopción y rendimiento.</aside>
 </section></div><div class="slide-wrap" data-slide="aprobar"><section id="aprobar" class="accent compact">
 <div class="head"><p class="kicker">Decisión · Compromiso acotado de 4 semanas</p><h2>Lo que pedimos aprobar hoy</h2></div>
@@ -514,7 +514,7 @@ td.strong { font-weight:600; }
 </ol>
 <div class="spacer"></div>
 <p class="small" style="font-weight:600;">Al final de esta presentación se incluye un Apéndice Técnico (láminas 18–20) con la estructura de módulos, ejemplo paralelo y metodología Scrum del equipo.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>17</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>17</span></div>
 <aside>No pedimos hoy firmar un cheque en blanco de 5 meses: pedimos aprobar solo 4 semanas de Fase 0 para cerrar TCO real, accesos de TI y mostrar 5 medidas conciliadas funcionando antes del Go/No-Go formal.</aside>
 </section></div><div class="slide-wrap" data-slide="modulos"><section id="modulos" class="compact">
 <div class="head"><p class="kicker">Apéndice Técnico · 1 / 3 · Estructura del repositorio</p><h2>Un monorepo: contratos compartidos + 4 módulos</h2></div>
@@ -526,7 +526,7 @@ td.strong { font-weight:600; }
 <div class="row" style="padding:18px 28px;"><h3 style="width:420px;">4 · Semántica y BI — Carril 2</h3><p class="body" style="font-size:23px;">Cube Core (medidas YAML + RLS) y Apache Superset (tema, roles y 3 plantillas)</p></div>
 </div>
 <p class="small muted">Cada módulo tiene su propio <code>AGENTS.md</code>: un agente puede leer <code>contracts/</code>, pero solo edita archivos dentro de su módulo.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>18</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>18</span></div>
 <aside>Apéndice técnico para TI y el equipo de ejecución: esta división elimina conflictos de código entre agentes y garantiza trazabilidad completa.</aside>
 </section></div><div class="slide-wrap" data-slide="ejemplo-paralelo"><section id="ejemplo-paralelo" class="alt compact">
 <div class="head"><p class="kicker">Apéndice Técnico · 2 / 3 · Ventas y Margen</p><h2>Cómo trabajamos sin esperar y cuándo nos unimos</h2></div>
@@ -554,7 +554,7 @@ td.strong { font-weight:600; }
 <p class="body" style="font-size:23px;"><strong>1.</strong> CI valida el molde &nbsp;→&nbsp; <strong>2.</strong> Cambio de enchufe en Cube (prueba → Trino real, sin tocar medidas ni tableros) &nbsp;→&nbsp; <strong>3.</strong> Conciliación 100% contra DWH / Power BI.</p>
 </div>
 
-<div class="footer"><span>Propuesta de XXX</span><span>19</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>19</span></div>
 <aside>Primero acordamos el molde exacto y datos de prueba. Así ambos carriles avanzan al 100% en paralelo; en los Días 8–9 cambiamos el enchufe de datos de prueba a reales y conciliamos contra el DWH.</aside>
 </section></div><div class="slide-wrap" data-slide="metodologia"><section id="metodologia" class="compact">
 <div class="head"><p class="kicker">Apéndice Técnico · 3 / 3 · Metodología operativa</p><h2>Scrum ligero por contratos (Sprints de 2 semanas)</h2></div>
@@ -581,7 +581,7 @@ td.strong { font-weight:600; }
 </div>
 </div>
 <p class="small muted">Definition of Done: pruebas de contrato en verde, conciliación 100% contra DWH, RLS validado, revisión humana y catálogo documentado.</p>
-<div class="footer"><span>Propuesta de XXX</span><span>20</span></div>
+<div class="footer"><span>Propuesta · Plataforma de Analítica Autoservicio</span><span>20</span></div>
 <aside>Scrum ligero sin burocracia con 4 puntos claros de encuentro cada 2 semanas, scope freeze, 20% para auditoría de código generado por agentes y 2 días dedicados a integración real y conciliación.</aside>
 </section></div>
 </div>
